@@ -1,0 +1,4 @@
+log/**/*
+temp/**/*
+db/schema.rb
+db/*.sqlite3
