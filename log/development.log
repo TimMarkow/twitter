@@ -7186,3 +7186,38 @@ Rendered posts/_post.html.erb (6.7ms)
 Rendered users/_login.html.erb (0.9ms)
 Rendered posts/index.html.erb within layouts/posts (12.9ms)
 Completed 200 OK in 23ms (Views: 15.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-13 23:57:34 -0700
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/timmarkowski/rubys/work/twitter/config/routes.rb:1)
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_posts__message_form_html_erb___3945915664942668394_2157923220_2815310350860066644 at /Users/timmarkowski/rubys/work/twitter/app/views/posts/_message_form.html.erb:1)
+Rendered posts/_message_form.html.erb (1.3ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_posts__post_html_erb___1840087021955294194_2157862080_4008778718106584575 at /Users/timmarkowski/rubys/work/twitter/app/views/posts/_post.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_posts__post_html_erb___1840087021955294194_2157862080_4008778718106584575 at /Users/timmarkowski/rubys/work/twitter/app/views/posts/_post.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_posts__post_html_erb___1840087021955294194_2157862080_4008778718106584575 at /Users/timmarkowski/rubys/work/twitter/app/views/posts/_post.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_posts__post_html_erb___1840087021955294194_2157862080_4008778718106584575 at /Users/timmarkowski/rubys/work/twitter/app/views/posts/_post.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_posts__post_html_erb___1840087021955294194_2157862080_4008778718106584575 at /Users/timmarkowski/rubys/work/twitter/app/views/posts/_post.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_posts__post_html_erb___1840087021955294194_2157862080_4008778718106584575 at /Users/timmarkowski/rubys/work/twitter/app/views/posts/_post.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_posts__post_html_erb___1840087021955294194_2157862080_4008778718106584575 at /Users/timmarkowski/rubys/work/twitter/app/views/posts/_post.html.erb:1)
+Rendered posts/_post.html.erb (7.6ms)
+Rendered posts/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 24ms (Views: 17.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-13 23:57:58 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_posts__message_form_html_erb___3945915664942668394_2156244860_2815310350860066644 at /Users/timmarkowski/rubys/work/twitter/app/views/posts/_message_form.html.erb:1)
+Rendered posts/_message_form.html.erb (1.4ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_posts__post_html_erb___1840087021955294194_2155574560_4008778718106584575 at /Users/timmarkowski/rubys/work/twitter/app/views/posts/_post.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_posts__post_html_erb___1840087021955294194_2155574560_4008778718106584575 at /Users/timmarkowski/rubys/work/twitter/app/views/posts/_post.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_posts__post_html_erb___1840087021955294194_2155574560_4008778718106584575 at /Users/timmarkowski/rubys/work/twitter/app/views/posts/_post.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_posts__post_html_erb___1840087021955294194_2155574560_4008778718106584575 at /Users/timmarkowski/rubys/work/twitter/app/views/posts/_post.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_posts__post_html_erb___1840087021955294194_2155574560_4008778718106584575 at /Users/timmarkowski/rubys/work/twitter/app/views/posts/_post.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_posts__post_html_erb___1840087021955294194_2155574560_4008778718106584575 at /Users/timmarkowski/rubys/work/twitter/app/views/posts/_post.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_posts__post_html_erb___1840087021955294194_2155574560_4008778718106584575 at /Users/timmarkowski/rubys/work/twitter/app/views/posts/_post.html.erb:1)
+Rendered posts/_post.html.erb (8.5ms)
+Rendered posts/index.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 25ms (Views: 17.6ms | ActiveRecord: 0.5ms)
