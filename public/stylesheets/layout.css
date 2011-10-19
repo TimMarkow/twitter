@@ -17,7 +17,7 @@ body {
 .post {
 	padding: 5px 20px 5px 20px;
 	background-color: #ffffff;
-	margin: 20px 0 20px 325px;
+	margin: 20px 0 20px 0;
 	color: #000000;
 	width: 500px;
 }
