@@ -10648,3 +10648,350 @@ Rendered posts/_post.html.erb (7.6ms)
 Rendered users/_login.html.erb (8.4ms)
 Rendered posts/index.html.erb within layouts/posts (37.6ms)
 Completed 200 OK in 48ms (Views: 40.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-18 21:09:41 -0700
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/timmarkowski/rubys/work/twitter/config/routes.rb:1)
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_posts__message_form_html_erb__1750660054490207944_2152329340__387323964018270354 at /Users/timmarkowski/rubys/work/twitter/app/views/posts/_message_form.html.erb:3)
+Rendered posts/_message_form.html.erb (43.9ms)
+Rendered posts/_post.html.erb (7.2ms)
+Rendered users/_login.html.erb (7.9ms)
+Rendered posts/index.html.erb within layouts/posts (63.6ms)
+Completed 200 OK in 73ms (Views: 66.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-18 21:12:44 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_posts__message_form_html_erb__1750660054490207944_2153763980__387323964018270354 at /Users/timmarkowski/rubys/work/twitter/app/views/posts/_message_form.html.erb:3)
+Rendered posts/_message_form.html.erb (46.0ms)
+Rendered posts/_post.html.erb (7.7ms)
+Rendered users/_login.html.erb (8.8ms)
+Rendered posts/index.html.erb within layouts/posts (69.0ms)
+Completed 200 OK in 79ms (Views: 71.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-18 21:12:48 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_posts__message_form_html_erb__1750660054490207944_2154063660__387323964018270354 at /Users/timmarkowski/rubys/work/twitter/app/views/posts/_message_form.html.erb:3)
+Rendered posts/_message_form.html.erb (46.8ms)
+Rendered posts/_post.html.erb (7.5ms)
+Rendered users/_login.html.erb (8.6ms)
+Rendered posts/index.html.erb within layouts/posts (68.9ms)
+Completed 200 OK in 79ms (Views: 71.6ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/posts?remote=true" for 127.0.0.1 at 2011-10-18 21:15:13 -0700
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ppxYrfEFOFWHwNrwYt1IL/yGvatWRY+IXwfjfZNIgak=", "message"=>"somethings not quite right", "commit"=>"Update", "remote"=>"true"}
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "posts" ("message", "created_at", "updated_at") VALUES ('somethings not quite right', '2011-10-19 04:15:13.253889', '2011-10-19 04:15:13.253889')[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 53ms
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-18 21:15:13 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_posts__message_form_html_erb__1750660054490207944_2168718360__387323964018270354 at /Users/timmarkowski/rubys/work/twitter/app/views/posts/_message_form.html.erb:3)
+Rendered posts/_message_form.html.erb (17.0ms)
+Rendered posts/_post.html.erb (8.2ms)
+Rendered users/_login.html.erb (8.2ms)
+Rendered posts/index.html.erb within layouts/posts (38.2ms)
+Completed 200 OK in 53ms (Views: 41.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-18 21:17:35 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_posts__message_form_html_erb__1750660054490207944_2168966520__387323964018270354 at /Users/timmarkowski/rubys/work/twitter/app/views/posts/_message_form.html.erb:3)
+Rendered posts/_message_form.html.erb (16.9ms)
+Rendered posts/_post.html.erb (7.4ms)
+Rendered users/_login.html.erb (8.3ms)
+Rendered posts/index.html.erb within layouts/posts (38.1ms)
+Completed 200 OK in 48ms (Views: 40.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-18 21:18:16 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+ERROR: compiling _app_views_posts__message_form_html_erb__1750660054490207944_2169159560__387323964018270354 RAISED /Users/timmarkowski/rubys/work/twitter/app/views/posts/_message_form.html.erb:1: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+...uffer.append= ( if logged_in? );@output_buffer.safe_concat('
+...                               ^
+/Users/timmarkowski/rubys/work/twitter/app/views/posts/_message_form.html.erb:8: syntax error, unexpected keyword_end, expecting ')'
+ end ;@output_buffer.to_s
+    ^
+/Users/timmarkowski/rubys/work/twitter/app/views/posts/_message_form.html.erb:9: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/timmarkowski/rubys/work/twitter/app/views/posts/_message_form.html.erb:11: syntax error, unexpected keyword_end, expecting ')'
+Function body:           def _app_views_posts__message_form_html_erb__1750660054490207944_2169159560__387323964018270354(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "posts/_message_form";_old_output_buffer = @output_buffer;message_form = local_assigns[:message_form];;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.append= ( if logged_in? );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+');@output_buffer.append_if_string= 	 form_tag(:controller => "posts", :action => "create", :remote => true) do 
+@output_buffer.safe_concat('	');@output_buffer.append= ( label_tag(:message, "what are you doing?" ) );@output_buffer.safe_concat(' <br />
+	');@output_buffer.append= ( text_area_tag(:message, nil, :size => "44x6") );@output_buffer.safe_concat(' <br />
+	');@output_buffer.append= ( submit_tag("Update") );@output_buffer.safe_concat('
+');	 end 
+ end ;@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `module_eval'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `compile'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_view/template.rb:134:in `block in render'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.3/lib/active_support/notifications.rb:54:in `instrument'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_view/template.rb:127:in `render'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:333:in `render_partial'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:262:in `block in render'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:260:in `render'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:378:in `_render_partial'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:22:in `render'
+/Users/timmarkowski/rubys/work/twitter/app/views/posts/index.html.erb:1:in `_app_views_posts_index_html_erb__52833773665273987_2169192040_2161260450747514979'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_view/template.rb:135:in `block in render'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.3/lib/active_support/notifications.rb:54:in `instrument'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_view/template.rb:127:in `render'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:56:in `_render_template'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:26:in `render'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:114:in `_render_template'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:92:in `render'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:17:in `render'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/timmarkowski/.rvm/rubies/ruby-1.9.2-p136/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activerecord-3.0.3/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_controller/metal/mime_responds.rb:261:in `block in retrieve_response_from_mimes'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_controller/metal/mime_responds.rb:192:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_controller/metal/mime_responds.rb:192:in `respond_to'
+/Users/timmarkowski/rubys/work/twitter/app/controllers/posts_controller.rb:4:in `index'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:151:in `process_action'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:435:in `_run__4107410488649357095__process_action__406128986408888775__callbacks'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:120:in `process'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:40:in `process'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_controller/metal.rb:138:in `dispatch'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_controller/metal.rb:178:in `block in action'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `block in call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:82:in `optimized_each'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/cookies.rb:295:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:32:in `block in call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:12:in `cache'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:31:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.3/lib/rails/rack/logger.rb:13:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.3/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/rack-1.2.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/static.rb:30:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.3/lib/rails/application.rb:168:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.3/lib/rails/application.rb:77:in `method_missing'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.3/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/Users/timmarkowski/.rvm/rubies/ruby-1.9.2-p136/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/timmarkowski/.rvm/rubies/ruby-1.9.2-p136/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/timmarkowski/.rvm/rubies/ruby-1.9.2-p136/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered posts/_message_form.html.erb (0.8ms)
+Rendered posts/index.html.erb within layouts/posts (2.0ms)
+Completed   in 12ms
+
+ActionView::Template::Error (/Users/timmarkowski/rubys/work/twitter/app/views/posts/_message_form.html.erb:1: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+...uffer.append= ( if logged_in? );@output_buffer.safe_concat('
+...                               ^
+/Users/timmarkowski/rubys/work/twitter/app/views/posts/_message_form.html.erb:8: syntax error, unexpected keyword_end, expecting ')'
+ end ;@output_buffer.to_s
+    ^
+/Users/timmarkowski/rubys/work/twitter/app/views/posts/_message_form.html.erb:9: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/timmarkowski/rubys/work/twitter/app/views/posts/_message_form.html.erb:11: syntax error, unexpected keyword_end, expecting ')'):
+    1: <%= if logged_in? %>
+    2: 
+    3: 	<% form_tag(:controller => "posts", :action => "create", :remote => true) do %>
+    4: 	<%= label_tag(:message, "what are you doing?" ) %> <br />
+  app/views/posts/index.html.erb:1:in `_app_views_posts_index_html_erb__52833773665273987_2169192040_2161260450747514979'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.5ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-18 21:18:29 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (27.5ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_posts__message_form_html_erb__1750660054490207944_2170425580__387323964018270354 at /Users/timmarkowski/rubys/work/twitter/app/views/posts/_message_form.html.erb:3)
+Rendered posts/_message_form.html.erb (17.0ms)
+Rendered posts/_post.html.erb (7.6ms)
+Rendered users/_login.html.erb (8.6ms)
+Rendered posts/index.html.erb within layouts/posts (38.1ms)
+Completed 200 OK in 76ms (Views: 41.1ms | ActiveRecord: 27.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-18 21:19:09 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered posts/_message_form.html.erb (17.8ms)
+Rendered posts/_post.html.erb (7.8ms)
+Rendered users/_login.html.erb (9.7ms)
+Rendered posts/index.html.erb within layouts/posts (40.2ms)
+Completed 200 OK in 50ms (Views: 42.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/posts?remote=true" for 127.0.0.1 at 2011-10-18 21:19:28 -0700
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ppxYrfEFOFWHwNrwYt1IL/yGvatWRY+IXwfjfZNIgak=", "message"=>"here we go", "commit"=>"Update", "remote"=>"true"}
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "posts" ("message", "created_at", "updated_at") VALUES ('here we go', '2011-10-19 04:19:28.299979', '2011-10-19 04:19:28.299979')[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 19ms
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-18 21:19:28 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.8ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (47.1ms)
+Rendered posts/_post.html.erb (8.0ms)
+Rendered users/_login.html.erb (8.5ms)
+Rendered posts/index.html.erb within layouts/posts (68.6ms)
+Completed 200 OK in 84ms (Views: 71.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2011-10-18 21:19:32 -0700
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-18 21:19:32 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+Rendered posts/_message_form.html.erb (0.5ms)
+Rendered posts/_post.html.erb (7.3ms)
+Rendered users/_login.html.erb (0.9ms)
+Rendered posts/index.html.erb within layouts/posts (13.1ms)
+Completed 200 OK in 23ms (Views: 16.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2011-10-18 21:19:42 -0700
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-10-18 21:19:44 -0700
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (7.5ms)
+Rendered users/new.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 27ms (Views: 14.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-10-18 21:20:02 -0700
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ppxYrfEFOFWHwNrwYt1IL/yGvatWRY+IXwfjfZNIgak=", "user"=>{"username"=>"ozzymeowfly", "email"=>"iheartflys@nom.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."username" = 'ozzymeowfly') LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."email" = 'iheartflys@nom.com') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "users" ("username", "email", "password_hash", "password_salt", "created_at", "updated_at") VALUES ('ozzymeowfly', 'iheartflys@nom.com', '$2a$10$0/1AEaiHz63k1hrAPSeS2OW62yXDPkzeURPC5KVH52L4MdhclUXHO', '$2a$10$0/1AEaiHz63k1hrAPSeS2O', '2011-10-19 04:20:02.551569', '2011-10-19 04:20:02.551569')[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 158ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-18 21:20:02 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (18.7ms)
+Rendered posts/_post.html.erb (7.6ms)
+Rendered users/_login.html.erb (8.7ms)
+Rendered posts/index.html.erb within layouts/posts (69.6ms)
+Completed 200 OK in 80ms (Views: 72.2ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/posts?remote=true" for 127.0.0.1 at 2011-10-18 21:20:13 -0700
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ppxYrfEFOFWHwNrwYt1IL/yGvatWRY+IXwfjfZNIgak=", "message"=>"its me ozzy!", "commit"=>"Update", "remote"=>"true"}
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "posts" ("message", "created_at", "updated_at") VALUES ('its me ozzy!', '2011-10-19 04:20:13.721798', '2011-10-19 04:20:13.721798')
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 20ms
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-18 21:20:13 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Rendered posts/_message_form.html.erb (16.0ms)
+Rendered posts/_post.html.erb (7.5ms)
+Rendered users/_login.html.erb (8.6ms)
+Rendered posts/index.html.erb within layouts/posts (36.7ms)
+Completed 200 OK in 46ms (Views: 39.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2011-10-18 21:20:18 -0700
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-18 21:20:18 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+Rendered posts/_message_form.html.erb (0.5ms)
+Rendered posts/_post.html.erb (7.4ms)
+Rendered users/_login.html.erb (0.9ms)
+Rendered posts/index.html.erb within layouts/posts (13.2ms)
+Completed 200 OK in 23ms (Views: 16.0ms | ActiveRecord: 0.6ms)
