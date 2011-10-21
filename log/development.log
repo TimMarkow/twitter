@@ -10995,3 +10995,2418 @@ Rendered posts/_post.html.erb (7.4ms)
 Rendered users/_login.html.erb (0.9ms)
 Rendered posts/index.html.erb within layouts/posts (13.2ms)
 Completed 200 OK in 23ms (Views: 16.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-18 21:32:52 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+Rendered posts/_message_form.html.erb (0.5ms)
+Rendered posts/_post.html.erb (7.6ms)
+Rendered users/_login.html.erb (0.9ms)
+Rendered posts/index.html.erb within layouts/posts (13.7ms)
+Completed 200 OK in 53ms (Views: 16.5ms | ActiveRecord: 0.6ms)
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/timmarkowski/rubys/work/twitter/config/routes.rb:1)
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/timmarkowski/rubys/work/twitter/config/routes.rb:1)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreatePosts (20111006040929)
+Migrating to CreateUsers (20111019023933)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+SQLite3::SQLException: table "users" already exists: CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) 
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/timmarkowski/rubys/work/twitter/config/routes.rb:1)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-18 21:43:30 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+Rendered posts/_message_form.html.erb (0.5ms)
+Rendered posts/_post.html.erb (35.1ms)
+Rendered users/_login.html.erb (0.9ms)
+Rendered posts/index.html.erb within layouts/posts (41.4ms)
+Completed 200 OK in 51ms (Views: 44.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/friendships" for 127.0.0.1 at 2011-10-18 21:43:39 -0700
+
+SyntaxError (/Users/timmarkowski/rubys/work/twitter/app/controllers/friendships_controller.rb:16: syntax error, unexpected tASSOC, expecting keyword_end
+    flash[:notice] => "Successfully destroyed friendships."
+                     ^):
+  
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-18 21:43:48 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+Rendered posts/_message_form.html.erb (0.5ms)
+Rendered posts/_post.html.erb (35.4ms)
+Rendered users/_login.html.erb (0.9ms)
+Rendered posts/index.html.erb within layouts/posts (41.4ms)
+Completed 200 OK in 51ms (Views: 44.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-10-18 21:43:51 -0700
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (7.4ms)
+Rendered users/new.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 26ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2011-10-18 21:43:53 -0700
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-10-18 21:43:59 -0700
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ppxYrfEFOFWHwNrwYt1IL/yGvatWRY+IXwfjfZNIgak=", "login"=>"markow", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."username" = 'markow') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 100ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-18 21:43:59 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (17.6ms)
+Rendered posts/_post.html.erb (8.1ms)
+Rendered users/_login.html.erb (8.3ms)
+Rendered posts/index.html.erb within layouts/posts (39.2ms)
+Completed 200 OK in 50ms (Views: 42.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-10-18 21:45:21 -0700
+
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.7ms)
+
+
+Started GET "/user" for 127.0.0.1 at 2011-10-18 21:45:25 -0700
+
+ActionController::RoutingError (No route matches "/user"):
+  
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-18 21:45:30 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (45.4ms)
+Rendered posts/_post.html.erb (7.7ms)
+Rendered users/_login.html.erb (8.0ms)
+Rendered posts/index.html.erb within layouts/posts (65.9ms)
+Completed 200 OK in 75ms (Views: 68.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/friendships" for 127.0.0.1 at 2011-10-18 21:45:37 -0700
+
+SyntaxError (/Users/timmarkowski/rubys/work/twitter/app/controllers/friendships_controller.rb:16: syntax error, unexpected tASSOC, expecting keyword_end
+    flash[:notice] => "Successfully destroyed friendships."
+                     ^):
+  
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.6ms)
+
+
+Started GET "/friendships" for 127.0.0.1 at 2011-10-18 21:46:09 -0700
+
+AbstractController::ActionNotFound (The action 'index' could not be found for FriendshipsController):
+  
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.8ms)
+
+
+Started GET "/friendship" for 127.0.0.1 at 2011-10-18 21:46:41 -0700
+
+ActionController::RoutingError (No route matches "/friendship"):
+  
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/friendships" for 127.0.0.1 at 2011-10-18 21:46:44 -0700
+
+AbstractController::ActionNotFound (The action 'index' could not be found for FriendshipsController):
+  
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-18 21:47:06 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (16.1ms)
+Rendered posts/_post.html.erb (8.4ms)
+Rendered users/_login.html.erb (8.5ms)
+Rendered posts/index.html.erb within layouts/posts (38.0ms)
+Completed 200 OK in 77ms (Views: 40.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-18 21:49:34 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (17.0ms)
+Rendered posts/_post.html.erb (8.1ms)
+Rendered users/_login.html.erb (8.4ms)
+Rendered posts/index.html.erb within layouts/posts (38.5ms)
+Completed 200 OK in 79ms (Views: 41.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/friendships" for 127.0.0.1 at 2011-10-18 21:49:40 -0700
+
+AbstractController::ActionNotFound (The action 'index' could not be found for FriendshipsController):
+  
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.7ms)
+
+
+Started GET "/friendships" for 127.0.0.1 at 2011-10-18 21:55:56 -0700
+
+AbstractController::ActionNotFound (The action 'index' could not be found for FriendshipsController):
+  
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-18 21:56:00 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+Rendered posts/_message_form.html.erb (8.3ms)
+Rendered posts/index.html.erb within layouts/posts (9.7ms)
+Completed   in 47ms
+
+ActionView::Template::Error (/Users/timmarkowski/rubys/work/twitter/app/models/user.rb:37: syntax error, unexpected keyword_end, expecting $end):
+    1: <% if logged_in? %>
+    2: 
+    3: 	<%= form_tag(:controller => "posts", :action => "create", :remote => true) do %>
+    4: 	<%= label_tag(:message, "what are you doing?" ) %> <br />
+  lib/controller_authentication.rb:24:in `current_user'
+  lib/controller_authentication.rb:28:in `logged_in?'
+  app/views/posts/_message_form.html.erb:1:in `_app_views_posts__message_form_html_erb__1750660054490207944_2170343900__387323964018270354'
+  app/views/posts/index.html.erb:1:in `_app_views_posts_index_html_erb__52833773665273987_2170359620_2161260450747514979'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.6ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-18 22:02:31 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+Rendered posts/_message_form.html.erb (36.6ms)
+Rendered posts/index.html.erb within layouts/posts (38.0ms)
+Completed   in 48ms
+
+ActionView::Template::Error (/Users/timmarkowski/rubys/work/twitter/app/models/user.rb:37: syntax error, unexpected keyword_end, expecting $end):
+    1: <% if logged_in? %>
+    2: 
+    3: 	<%= form_tag(:controller => "posts", :action => "create", :remote => true) do %>
+    4: 	<%= label_tag(:message, "what are you doing?" ) %> <br />
+  lib/controller_authentication.rb:24:in `current_user'
+  lib/controller_authentication.rb:28:in `logged_in?'
+  app/views/posts/_message_form.html.erb:1:in `_app_views_posts__message_form_html_erb__1750660054490207944_2153813660__387323964018270354'
+  app/views/posts/index.html.erb:1:in `_app_views_posts_index_html_erb__52833773665273987_2153853640_2161260450747514979'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-10-18 22:02:55 -0700
+  Processing by UsersController#index as HTML
+Completed   in 5ms
+
+SyntaxError (/Users/timmarkowski/rubys/work/twitter/app/models/user.rb:37: syntax error, unexpected keyword_end, expecting $end):
+  lib/controller_authentication.rb:24:in `current_user'
+  lib/controller_authentication.rb:28:in `logged_in?'
+  lib/controller_authentication.rb:32:in `login_required'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.8ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-10-18 22:04:53 -0700
+  Processing by UsersController#index as HTML
+Completed   in 5ms
+
+SyntaxError (/Users/timmarkowski/rubys/work/twitter/app/models/user.rb:37: syntax error, unexpected keyword_end, expecting $end):
+  lib/controller_authentication.rb:24:in `current_user'
+  lib/controller_authentication.rb:28:in `logged_in?'
+  lib/controller_authentication.rb:32:in `login_required'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.4ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-18 22:04:55 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (28.4ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+Rendered posts/_message_form.html.erb (8.3ms)
+Rendered posts/index.html.erb within layouts/posts (10.0ms)
+Completed   in 48ms
+
+ActionView::Template::Error (/Users/timmarkowski/rubys/work/twitter/app/models/user.rb:37: syntax error, unexpected keyword_end, expecting $end):
+    1: <% if logged_in? %>
+    2: 
+    3: 	<%= form_tag(:controller => "posts", :action => "create", :remote => true) do %>
+    4: 	<%= label_tag(:message, "what are you doing?" ) %> <br />
+  lib/controller_authentication.rb:24:in `current_user'
+  lib/controller_authentication.rb:28:in `logged_in?'
+  app/views/posts/_message_form.html.erb:1:in `_app_views_posts__message_form_html_erb__1750660054490207944_2170411140__387323964018270354'
+  app/views/posts/index.html.erb:1:in `_app_views_posts_index_html_erb__52833773665273987_2170429860_2161260450747514979'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.3ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-18 22:08:33 -0700
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/timmarkowski/rubys/work/twitter/config/routes.rb:1)
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+Rendered posts/_message_form.html.erb (8.1ms)
+Rendered posts/index.html.erb within layouts/posts (9.6ms)
+Completed   in 20ms
+
+ActionView::Template::Error (/Users/timmarkowski/rubys/work/twitter/app/models/user.rb:37: syntax error, unexpected keyword_end, expecting $end):
+    1: <% if logged_in? %>
+    2: 
+    3: 	<%= form_tag(:controller => "posts", :action => "create", :remote => true) do %>
+    4: 	<%= label_tag(:message, "what are you doing?" ) %> <br />
+  lib/controller_authentication.rb:24:in `current_user'
+  lib/controller_authentication.rb:28:in `logged_in?'
+  app/views/posts/_message_form.html.erb:1:in `_app_views_posts__message_form_html_erb__1750660054490207944_2155457600__387323964018270354'
+  app/views/posts/index.html.erb:1:in `_app_views_posts_index_html_erb__52833773665273987_2155473020_2161260450747514979'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (29.1ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.7ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (38.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-18 22:08:35 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+Rendered posts/_message_form.html.erb (8.0ms)
+Rendered posts/index.html.erb within layouts/posts (9.5ms)
+Completed   in 19ms
+
+ActionView::Template::Error (/Users/timmarkowski/rubys/work/twitter/app/models/user.rb:37: syntax error, unexpected keyword_end, expecting $end):
+    1: <% if logged_in? %>
+    2: 
+    3: 	<%= form_tag(:controller => "posts", :action => "create", :remote => true) do %>
+    4: 	<%= label_tag(:message, "what are you doing?" ) %> <br />
+  lib/controller_authentication.rb:24:in `current_user'
+  lib/controller_authentication.rb:28:in `logged_in?'
+  app/views/posts/_message_form.html.erb:1:in `_app_views_posts__message_form_html_erb__1750660054490207944_2155848200__387323964018270354'
+  app/views/posts/index.html.erb:1:in `_app_views_posts_index_html_erb__52833773665273987_2156545160_2161260450747514979'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-18 22:08:38 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+Rendered posts/_message_form.html.erb (8.1ms)
+Rendered posts/index.html.erb within layouts/posts (9.6ms)
+Completed   in 20ms
+
+ActionView::Template::Error (/Users/timmarkowski/rubys/work/twitter/app/models/user.rb:37: syntax error, unexpected keyword_end, expecting $end):
+    1: <% if logged_in? %>
+    2: 
+    3: 	<%= form_tag(:controller => "posts", :action => "create", :remote => true) do %>
+    4: 	<%= label_tag(:message, "what are you doing?" ) %> <br />
+  lib/controller_authentication.rb:24:in `current_user'
+  lib/controller_authentication.rb:28:in `logged_in?'
+  app/views/posts/_message_form.html.erb:1:in `_app_views_posts__message_form_html_erb__1750660054490207944_2168862340__387323964018270354'
+  app/views/posts/index.html.erb:1:in `_app_views_posts_index_html_erb__52833773665273987_2168886960_2161260450747514979'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.7ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-10-18 22:08:55 -0700
+  Processing by UsersController#index as HTML
+Completed   in 5ms
+
+SyntaxError (/Users/timmarkowski/rubys/work/twitter/app/models/user.rb:37: syntax error, unexpected keyword_end, expecting $end):
+  lib/controller_authentication.rb:24:in `current_user'
+  lib/controller_authentication.rb:28:in `logged_in?'
+  lib/controller_authentication.rb:32:in `login_required'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.4ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.6ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2011-10-18 22:09:01 -0700
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-10-18 22:09:07 -0700
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ppxYrfEFOFWHwNrwYt1IL/yGvatWRY+IXwfjfZNIgak=", "login"=>"markow", "password"=>"[FILTERED]", "commit"=>"Log in"}
+Completed   in 5ms
+
+SyntaxError (/Users/timmarkowski/rubys/work/twitter/app/models/user.rb:37: syntax error, unexpected keyword_end, expecting $end):
+  app/controllers/sessions_controller.rb:6:in `create'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.5ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/timmarkowski/rubys/work/twitter/config/routes.rb:1)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-10-18 22:10:21 -0700
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ppxYrfEFOFWHwNrwYt1IL/yGvatWRY+IXwfjfZNIgak=", "login"=>"markow", "password"=>"[FILTERED]", "commit"=>"Log in"}
+Completed   in 6ms
+
+SyntaxError (/Users/timmarkowski/rubys/work/twitter/app/models/user.rb:37: syntax error, unexpected keyword_end, expecting $end):
+  app/controllers/sessions_controller.rb:6:in `create'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (26.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.6ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (33.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-18 22:10:25 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.8ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+Rendered posts/_message_form.html.erb (21.8ms)
+Rendered posts/index.html.erb within layouts/posts (23.4ms)
+Completed   in 91ms
+
+ActionView::Template::Error (/Users/timmarkowski/rubys/work/twitter/app/models/user.rb:37: syntax error, unexpected keyword_end, expecting $end):
+    1: <% if logged_in? %>
+    2: 
+    3: 	<%= form_tag(:controller => "posts", :action => "create", :remote => true) do %>
+    4: 	<%= label_tag(:message, "what are you doing?" ) %> <br />
+  lib/controller_authentication.rb:24:in `current_user'
+  lib/controller_authentication.rb:28:in `logged_in?'
+  app/views/posts/_message_form.html.erb:1:in `_app_views_posts__message_form_html_erb___2917803680111619200_2155010800__3430434528648928562'
+  app/views/posts/index.html.erb:1:in `_app_views_posts_index_html_erb___3993357872563998022_2155061500_3725023610752753282'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.1ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-18 22:12:58 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+Rendered posts/_message_form.html.erb (8.0ms)
+Rendered posts/index.html.erb within layouts/posts (9.4ms)
+Completed   in 19ms
+
+ActionView::Template::Error (/Users/timmarkowski/rubys/work/twitter/app/models/user.rb:37: syntax error, unexpected keyword_end, expecting $end):
+    1: <% if logged_in? %>
+    2: 
+    3: 	<%= form_tag(:controller => "posts", :action => "create", :remote => true) do %>
+    4: 	<%= label_tag(:message, "what are you doing?" ) %> <br />
+  lib/controller_authentication.rb:24:in `current_user'
+  lib/controller_authentication.rb:28:in `logged_in?'
+  app/views/posts/_message_form.html.erb:1:in `_app_views_posts__message_form_html_erb___2917803680111619200_2155676740__3430434528648928562'
+  app/views/posts/index.html.erb:1:in `_app_views_posts_index_html_erb___3993357872563998022_2155697320_3725023610752753282'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.3ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-18 22:12:59 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+Rendered posts/_message_form.html.erb (8.1ms)
+Rendered posts/index.html.erb within layouts/posts (9.6ms)
+Completed   in 20ms
+
+ActionView::Template::Error (/Users/timmarkowski/rubys/work/twitter/app/models/user.rb:37: syntax error, unexpected keyword_end, expecting $end):
+    1: <% if logged_in? %>
+    2: 
+    3: 	<%= form_tag(:controller => "posts", :action => "create", :remote => true) do %>
+    4: 	<%= label_tag(:message, "what are you doing?" ) %> <br />
+  lib/controller_authentication.rb:24:in `current_user'
+  lib/controller_authentication.rb:28:in `logged_in?'
+  app/views/posts/_message_form.html.erb:1:in `_app_views_posts__message_form_html_erb___2917803680111619200_2172723460__3430434528648928562'
+  app/views/posts/index.html.erb:1:in `_app_views_posts_index_html_erb___3993357872563998022_2172746580_3725023610752753282'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.5ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-18 22:13:05 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+Rendered posts/_message_form.html.erb (8.7ms)
+Rendered posts/index.html.erb within layouts/posts (10.2ms)
+Completed   in 46ms
+
+ActionView::Template::Error (/Users/timmarkowski/rubys/work/twitter/app/models/user.rb:37: syntax error, unexpected keyword_end, expecting $end):
+    1: <% if logged_in? %>
+    2: 
+    3: 	<%= form_tag(:controller => "posts", :action => "create", :remote => true) do %>
+    4: 	<%= label_tag(:message, "what are you doing?" ) %> <br />
+  lib/controller_authentication.rb:24:in `current_user'
+  lib/controller_authentication.rb:28:in `logged_in?'
+  app/views/posts/_message_form.html.erb:1:in `_app_views_posts__message_form_html_erb___2917803680111619200_2173537200__3430434528648928562'
+  app/views/posts/index.html.erb:1:in `_app_views_posts_index_html_erb___3993357872563998022_2173555640_3725023610752753282'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.6ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.5ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2011-10-18 22:13:09 -0700
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-10-18 22:13:14 -0700
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ppxYrfEFOFWHwNrwYt1IL/yGvatWRY+IXwfjfZNIgak=", "login"=>"markow", "password"=>"[FILTERED]", "commit"=>"Log in"}
+Completed   in 5ms
+
+SyntaxError (/Users/timmarkowski/rubys/work/twitter/app/models/user.rb:37: syntax error, unexpected keyword_end, expecting $end):
+  app/controllers/sessions_controller.rb:6:in `create'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.5ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-10-18 22:17:08 -0700
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ppxYrfEFOFWHwNrwYt1IL/yGvatWRY+IXwfjfZNIgak=", "login"=>"markow", "password"=>"[FILTERED]", "commit"=>"Log in"}
+Completed   in 117ms
+
+NoMethodError (undefined method `attr_accessible' for main:Object):
+  app/models/user.rb:6:in `<top (required)>'
+  app/controllers/sessions_controller.rb:6:in `create'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.5ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.1ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-10-18 22:17:36 -0700
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ppxYrfEFOFWHwNrwYt1IL/yGvatWRY+IXwfjfZNIgak=", "login"=>"markow", "password"=>"[FILTERED]", "commit"=>"Log in"}
+Completed   in 10ms
+
+NoMethodError (undefined method `attr_accessible' for main:Object):
+  app/models/user.rb:6:in `<top (required)>'
+  app/controllers/sessions_controller.rb:6:in `create'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.6ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-18 22:17:40 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+Rendered posts/_message_form.html.erb (11.9ms)
+Rendered posts/index.html.erb within layouts/posts (13.3ms)
+Completed   in 23ms
+
+ActionView::Template::Error (undefined method `attr_accessible' for main:Object):
+    1: <% if logged_in? %>
+    2: 
+    3: 	<%= form_tag(:controller => "posts", :action => "create", :remote => true) do %>
+    4: 	<%= label_tag(:message, "what are you doing?" ) %> <br />
+  app/models/user.rb:6:in `<top (required)>'
+  lib/controller_authentication.rb:24:in `current_user'
+  lib/controller_authentication.rb:28:in `logged_in?'
+  app/views/posts/_message_form.html.erb:1:in `_app_views_posts__message_form_html_erb___2917803680111619200_2172651040__3430434528648928562'
+  app/views/posts/index.html.erb:1:in `_app_views_posts_index_html_erb___3993357872563998022_2172680600_3725023610752753282'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.4ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.1ms)
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/timmarkowski/rubys/work/twitter/config/routes.rb:1)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreatePosts (20111006040929)
+Migrating to CreateUsers (20111019023933)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+SQLite3::SQLException: table "users" already exists: CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) 
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-18 22:18:09 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+Rendered posts/_message_form.html.erb (12.6ms)
+Rendered posts/index.html.erb within layouts/posts (14.1ms)
+Completed   in 24ms
+
+ActionView::Template::Error (undefined method `attr_accessible' for main:Object):
+    1: <% if logged_in? %>
+    2: 
+    3: 	<%= form_tag(:controller => "posts", :action => "create", :remote => true) do %>
+    4: 	<%= label_tag(:message, "what are you doing?" ) %> <br />
+  app/models/user.rb:6:in `<top (required)>'
+  lib/controller_authentication.rb:24:in `current_user'
+  lib/controller_authentication.rb:28:in `logged_in?'
+  app/views/posts/_message_form.html.erb:1:in `_app_views_posts__message_form_html_erb___2917803680111619200_2173158060__3430434528648928562'
+  app/views/posts/index.html.erb:1:in `_app_views_posts_index_html_erb___3993357872563998022_2173183400_3725023610752753282'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.5ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-18 22:20:52 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (28.6ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+Rendered posts/_message_form.html.erb (12.1ms)
+Rendered posts/index.html.erb within layouts/posts (13.6ms)
+Completed   in 51ms
+
+ActionView::Template::Error (undefined method `attr_accessible' for main:Object):
+    1: <% if logged_in? %>
+    2: 
+    3: 	<%= form_tag(:controller => "posts", :action => "create", :remote => true) do %>
+    4: 	<%= label_tag(:message, "what are you doing?" ) %> <br />
+  app/models/user.rb:6:in `<top (required)>'
+  lib/controller_authentication.rb:24:in `current_user'
+  lib/controller_authentication.rb:28:in `logged_in?'
+  app/views/posts/_message_form.html.erb:1:in `_app_views_posts__message_form_html_erb___2917803680111619200_2173582540__3430434528648928562'
+  app/views/posts/index.html.erb:1:in `_app_views_posts_index_html_erb___3993357872563998022_2173595840_3725023610752753282'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.4ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-18 22:34:05 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+Rendered posts/_message_form.html.erb (41.3ms)
+Rendered posts/index.html.erb within layouts/posts (42.8ms)
+Completed   in 53ms
+
+ActionView::Template::Error (undefined method `attr_accessor' for main:Object):
+    1: <% if logged_in? %>
+    2: 
+    3: 	<%= form_tag(:controller => "posts", :action => "create", :remote => true) do %>
+    4: 	<%= label_tag(:message, "what are you doing?" ) %> <br />
+  app/models/user.rb:8:in `<top (required)>'
+  lib/controller_authentication.rb:24:in `current_user'
+  lib/controller_authentication.rb:28:in `logged_in?'
+  app/views/posts/_message_form.html.erb:1:in `_app_views_posts__message_form_html_erb___2917803680111619200_2153655600__3430434528648928562'
+  app/views/posts/index.html.erb:1:in `_app_views_posts_index_html_erb___3993357872563998022_2153701700_3725023610752753282'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.6ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-18 22:34:24 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+Rendered posts/_message_form.html.erb (13.0ms)
+Rendered posts/index.html.erb within layouts/posts (14.5ms)
+Completed   in 24ms
+
+ActionView::Template::Error (undefined method `before_save' for main:Object):
+    1: <% if logged_in? %>
+    2: 
+    3: 	<%= form_tag(:controller => "posts", :action => "create", :remote => true) do %>
+    4: 	<%= label_tag(:message, "what are you doing?" ) %> <br />
+  app/models/user.rb:9:in `<top (required)>'
+  lib/controller_authentication.rb:24:in `current_user'
+  lib/controller_authentication.rb:28:in `logged_in?'
+  app/views/posts/_message_form.html.erb:1:in `_app_views_posts__message_form_html_erb___2917803680111619200_2155180480__3430434528648928562'
+  app/views/posts/index.html.erb:1:in `_app_views_posts_index_html_erb___3993357872563998022_2155206500_3725023610752753282'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.7ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-18 22:36:43 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+Rendered posts/_message_form.html.erb (7.5ms)
+Rendered posts/index.html.erb within layouts/posts (8.9ms)
+Completed   in 18ms
+
+ActionView::Template::Error (/Users/timmarkowski/rubys/work/twitter/app/models/user.rb:36: syntax error, unexpected $end, expecting keyword_end):
+    1: <% if logged_in? %>
+    2: 
+    3: 	<%= form_tag(:controller => "posts", :action => "create", :remote => true) do %>
+    4: 	<%= label_tag(:message, "what are you doing?" ) %> <br />
+  lib/controller_authentication.rb:24:in `current_user'
+  lib/controller_authentication.rb:28:in `logged_in?'
+  app/views/posts/_message_form.html.erb:1:in `_app_views_posts__message_form_html_erb___2917803680111619200_2155546980__3430434528648928562'
+  app/views/posts/index.html.erb:1:in `_app_views_posts_index_html_erb___3993357872563998022_2155572280_3725023610752753282'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (31.6ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (36.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-18 22:38:02 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+Rendered posts/_message_form.html.erb (17.0ms)
+Rendered posts/index.html.erb within layouts/posts (18.5ms)
+Completed   in 28ms
+
+ActionView::Template::Error (undefined method `attr_accessible' for main:Object):
+    1: <% if logged_in? %>
+    2: 
+    3: 	<%= form_tag(:controller => "posts", :action => "create", :remote => true) do %>
+    4: 	<%= label_tag(:message, "what are you doing?" ) %> <br />
+  app/models/user.rb:6:in `<top (required)>'
+  lib/controller_authentication.rb:24:in `current_user'
+  lib/controller_authentication.rb:28:in `logged_in?'
+  app/views/posts/_message_form.html.erb:1:in `_app_views_posts__message_form_html_erb___2917803680111619200_2162175840__3430434528648928562'
+  app/views/posts/index.html.erb:1:in `_app_views_posts_index_html_erb___3993357872563998022_2162195660_3725023610752753282'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.3ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-18 22:40:10 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+Rendered posts/_message_form.html.erb (12.8ms)
+Rendered posts/index.html.erb within layouts/posts (14.3ms)
+Completed   in 25ms
+
+ActionView::Template::Error (undefined method `attr_accessible' for main:Object):
+    1: <% if logged_in? %>
+    2: 
+    3: 	<%= form_tag(:controller => "posts", :action => "create", :remote => true) do %>
+    4: 	<%= label_tag(:message, "what are you doing?" ) %> <br />
+  app/models/user.rb:6:in `<top (required)>'
+  lib/controller_authentication.rb:24:in `current_user'
+  lib/controller_authentication.rb:28:in `logged_in?'
+  app/views/posts/_message_form.html.erb:1:in `_app_views_posts__message_form_html_erb___2917803680111619200_2172745180__3430434528648928562'
+  app/views/posts/index.html.erb:1:in `_app_views_posts_index_html_erb___3993357872563998022_2172800000_3725023610752753282'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.4ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-18 22:48:42 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.7ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+Rendered posts/_message_form.html.erb (13.0ms)
+Rendered posts/index.html.erb within layouts/posts (14.6ms)
+Completed   in 24ms
+
+ActionView::Template::Error (undefined method `attr_accessible' for main:Object):
+    1: <% if logged_in? %>
+    2: 
+    3: 	<%= form_tag(:controller => "posts", :action => "create", :remote => true) do %>
+    4: 	<%= label_tag(:message, "what are you doing?" ) %> <br />
+  app/models/user.rb:6:in `<top (required)>'
+  lib/controller_authentication.rb:24:in `current_user'
+  lib/controller_authentication.rb:28:in `logged_in?'
+  app/views/posts/_message_form.html.erb:1:in `_app_views_posts__message_form_html_erb___2917803680111619200_2173126880__3430434528648928562'
+  app/views/posts/index.html.erb:1:in `_app_views_posts_index_html_erb___3993357872563998022_2173150040_3725023610752753282'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.9ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-18 22:49:45 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+Rendered posts/_message_form.html.erb (12.3ms)
+Rendered posts/index.html.erb within layouts/posts (13.8ms)
+Completed   in 25ms
+
+ActionView::Template::Error (undefined method `attr_accessor' for main:Object):
+    1: <% if logged_in? %>
+    2: 
+    3: 	<%= form_tag(:controller => "posts", :action => "create", :remote => true) do %>
+    4: 	<%= label_tag(:message, "what are you doing?" ) %> <br />
+  app/models/user.rb:8:in `<top (required)>'
+  lib/controller_authentication.rb:24:in `current_user'
+  lib/controller_authentication.rb:28:in `logged_in?'
+  app/views/posts/_message_form.html.erb:1:in `_app_views_posts__message_form_html_erb___2917803680111619200_2173393620__3430434528648928562'
+  app/views/posts/index.html.erb:1:in `_app_views_posts_index_html_erb___3993357872563998022_2173421200_3725023610752753282'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-18 22:49:54 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+Rendered posts/_message_form.html.erb (39.6ms)
+Rendered posts/index.html.erb within layouts/posts (41.1ms)
+Completed   in 51ms
+
+ActionView::Template::Error (undefined method `before_save' for main:Object):
+    1: <% if logged_in? %>
+    2: 
+    3: 	<%= form_tag(:controller => "posts", :action => "create", :remote => true) do %>
+    4: 	<%= label_tag(:message, "what are you doing?" ) %> <br />
+  app/models/user.rb:9:in `<top (required)>'
+  lib/controller_authentication.rb:24:in `current_user'
+  lib/controller_authentication.rb:28:in `logged_in?'
+  app/views/posts/_message_form.html.erb:1:in `_app_views_posts__message_form_html_erb___2917803680111619200_2153407260__3430434528648928562'
+  app/views/posts/index.html.erb:1:in `_app_views_posts_index_html_erb___3993357872563998022_2153468660_3725023610752753282'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.4ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-18 22:50:01 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+Rendered posts/_message_form.html.erb (40.7ms)
+Rendered posts/index.html.erb within layouts/posts (42.2ms)
+Completed   in 52ms
+
+ActionView::Template::Error (undefined method `validates_presence_of' for main:Object):
+    1: <% if logged_in? %>
+    2: 
+    3: 	<%= form_tag(:controller => "posts", :action => "create", :remote => true) do %>
+    4: 	<%= label_tag(:message, "what are you doing?" ) %> <br />
+  app/models/user.rb:11:in `<top (required)>'
+  lib/controller_authentication.rb:24:in `current_user'
+  lib/controller_authentication.rb:28:in `logged_in?'
+  app/views/posts/_message_form.html.erb:1:in `_app_views_posts__message_form_html_erb___2917803680111619200_2154054740__3430434528648928562'
+  app/views/posts/index.html.erb:1:in `_app_views_posts_index_html_erb___3993357872563998022_2154123480_3725023610752753282'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.9ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-18 22:50:18 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+Rendered posts/_message_form.html.erb (12.3ms)
+Rendered posts/index.html.erb within layouts/posts (13.7ms)
+Completed   in 23ms
+
+ActionView::Template::Error (undefined method `attr_accessible' for main:Object):
+    1: <% if logged_in? %>
+    2: 
+    3: 	<%= form_tag(:controller => "posts", :action => "create", :remote => true) do %>
+    4: 	<%= label_tag(:message, "what are you doing?" ) %> <br />
+  app/models/user.rb:6:in `<top (required)>'
+  lib/controller_authentication.rb:24:in `current_user'
+  lib/controller_authentication.rb:28:in `logged_in?'
+  app/views/posts/_message_form.html.erb:1:in `_app_views_posts__message_form_html_erb___2917803680111619200_2155206860__3430434528648928562'
+  app/views/posts/index.html.erb:1:in `_app_views_posts_index_html_erb___3993357872563998022_2155233080_3725023610752753282'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.7ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.6ms)
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/timmarkowski/rubys/work/twitter/config/routes.rb:1)
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/timmarkowski/rubys/work/twitter/config/routes.rb:1)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreatePosts (20111006040929)
+Migrating to CreateUsers (20111019023933)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+SQLite3::SQLException: table "users" already exists: CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) 
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-18 22:52:49 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.7ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+Rendered posts/_message_form.html.erb (58.8ms)
+Rendered posts/index.html.erb within layouts/posts (60.5ms)
+Completed   in 120ms
+
+ActionView::Template::Error (undefined method `attr_accessible' for main:Object):
+    1: <% if logged_in? %>
+    2: 
+    3: 	<%= form_tag(:controller => "posts", :action => "create", :remote => true) do %>
+    4: 	<%= label_tag(:message, "what are you doing?" ) %> <br />
+  app/models/user.rb:6:in `<top (required)>'
+  lib/controller_authentication.rb:24:in `current_user'
+  lib/controller_authentication.rb:28:in `logged_in?'
+  app/views/posts/_message_form.html.erb:1:in `_app_views_posts__message_form_html_erb___4467086140210481341_2161662100__4209807420784452733'
+  app/views/posts/index.html.erb:1:in `_app_views_posts_index_html_erb__2954979912114867657_2161693260_2923797888954910195'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.4ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-18 22:55:18 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+Rendered posts/_message_form.html.erb (13.9ms)
+Rendered posts/index.html.erb within layouts/posts (16.0ms)
+Completed   in 27ms
+
+ActionView::Template::Error (undefined method `attr_accessible' for main:Object):
+    1: <% if logged_in? %>
+    2: 
+    3: 	<%= form_tag(:controller => "posts", :action => "create", :remote => true) do %>
+    4: 	<%= label_tag(:message, "what are you doing?" ) %> <br />
+  app/models/user.rb:6:in `<top (required)>'
+  lib/controller_authentication.rb:24:in `current_user'
+  lib/controller_authentication.rb:28:in `logged_in?'
+  app/views/posts/_message_form.html.erb:1:in `_app_views_posts__message_form_html_erb___4467086140210481341_2155546180__4209807420784452733'
+  app/views/posts/index.html.erb:1:in `_app_views_posts_index_html_erb__2954979912114867657_2155588020_2923797888954910195'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-18 23:02:26 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (17.5ms)
+Rendered posts/_post.html.erb (5.6ms)
+Rendered users/_login.html.erb (0.9ms)
+Rendered posts/index.html.erb within layouts/posts (73.9ms)
+Completed 200 OK in 84ms (Views: 76.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-10-18 23:02:39 -0700
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered users/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 26ms (Views: 13.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/friendships?friend_id=2" for 127.0.0.1 at 2011-10-18 23:02:45 -0700
+
+AbstractController::ActionNotFound (The action 'index' could not be found for FriendshipsController):
+  
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-18 23:09:22 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (16.3ms)
+Rendered posts/_post.html.erb (8.0ms)
+Rendered users/_login.html.erb (0.8ms)
+Rendered posts/index.html.erb within layouts/posts (39.4ms)
+Completed 200 OK in 49ms (Views: 42.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/friendships" for 127.0.0.1 at 2011-10-18 23:09:31 -0700
+
+AbstractController::ActionNotFound (The action 'index' could not be found for FriendshipsController):
+  
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-10-18 23:09:36 -0700
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered users/index.html.erb within layouts/application (38.2ms)
+Completed 200 OK in 55ms (Views: 42.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/friendships?friend_id=2" for 127.0.0.1 at 2011-10-18 23:09:38 -0700
+
+AbstractController::ActionNotFound (The action 'index' could not be found for FriendshipsController):
+  
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-18 23:09:47 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (42.6ms)
+Rendered posts/_post.html.erb (7.5ms)
+Rendered users/_login.html.erb (0.8ms)
+Rendered posts/index.html.erb within layouts/posts (64.0ms)
+Completed 200 OK in 74ms (Views: 66.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-18 23:09:56 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (45.7ms)
+Rendered posts/_post.html.erb (8.7ms)
+Rendered users/_login.html.erb (0.8ms)
+Rendered posts/index.html.erb within layouts/posts (69.1ms)
+Completed 200 OK in 79ms (Views: 71.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-18 23:11:09 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (45.5ms)
+Rendered posts/_post.html.erb (7.6ms)
+Rendered users/_login.html.erb (1.0ms)
+Rendered posts/index.html.erb within layouts/posts (66.9ms)
+Completed 200 OK in 77ms (Views: 69.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/new" for 127.0.0.1 at 2011-10-18 23:11:15 -0700
+
+ActionController::RoutingError (No route matches "/new"):
+  
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-10-18 23:11:42 -0700
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered users/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 26ms (Views: 13.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/friendships?friend_id=2" for 127.0.0.1 at 2011-10-18 23:11:48 -0700
+
+AbstractController::ActionNotFound (The action 'index' could not be found for FriendshipsController):
+  
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.7ms)
+
+
+Started GET "/friendships" for 127.0.0.1 at 2011-10-18 23:19:46 -0700
+
+AbstractController::ActionNotFound (The action 'index' could not be found for FriendshipsController):
+  
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-18 23:20:05 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (16.3ms)
+Rendered posts/_post.html.erb (36.4ms)
+Rendered users/_login.html.erb (0.9ms)
+Rendered posts/index.html.erb within layouts/posts (67.3ms)
+Completed 200 OK in 77ms (Views: 70.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/friendships" for 127.0.0.1 at 2011-10-19 18:43:24 -0700
+
+AbstractController::ActionNotFound (The action 'index' could not be found for FriendshipsController):
+  
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-10-19 18:43:31 -0700
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered users/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 55ms (Views: 13.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/friendships?friend_id=2" for 127.0.0.1 at 2011-10-19 18:43:32 -0700
+
+AbstractController::ActionNotFound (The action 'index' could not be found for FriendshipsController):
+  
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.7ms)
+
+
+Started POST "/friendships?friend_id=2" for 127.0.0.1 at 2011-10-19 20:48:18 -0700
+
+AbstractController::ActionNotFound (The action 'index' could not be found for FriendshipsController):
+  
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.7ms)
+
+
+Started GET "/friendships" for 127.0.0.1 at 2011-10-19 20:48:23 -0700
+
+AbstractController::ActionNotFound (The action 'index' could not be found for FriendshipsController):
+  
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-19 20:48:28 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.2ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (16.2ms)
+Rendered posts/_post.html.erb (11.5ms)
+Rendered users/_login.html.erb (0.8ms)
+Rendered posts/index.html.erb within layouts/posts (41.7ms)
+Completed 200 OK in 88ms (Views: 44.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-19 20:49:30 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (47.5ms)
+Rendered posts/_post.html.erb (8.0ms)
+Rendered users/_login.html.erb (0.9ms)
+Rendered posts/index.html.erb within layouts/posts (69.3ms)
+Completed 200 OK in 80ms (Views: 72.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-19 20:49:38 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (16.4ms)
+Rendered posts/_post.html.erb (8.3ms)
+Rendered users/_login.html.erb (0.8ms)
+Rendered posts/index.html.erb within layouts/posts (40.3ms)
+Completed 200 OK in 50ms (Views: 42.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-19 20:55:05 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (17.1ms)
+Rendered posts/_post.html.erb (8.5ms)
+Rendered users/_login.html.erb (0.9ms)
+Rendered posts/index.html.erb within layouts/posts (75.8ms)
+Completed 200 OK in 86ms (Views: 78.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/sow" for 127.0.0.1 at 2011-10-19 20:55:12 -0700
+
+ActionController::RoutingError (No route matches "/sow"):
+  
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/show" for 127.0.0.1 at 2011-10-19 20:55:16 -0700
+
+ActionController::RoutingError (No route matches "/show"):
+  
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-10-19 20:55:19 -0700
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered users/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 25ms (Views: 12.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/friendships?friend_id=2" for 127.0.0.1 at 2011-10-19 20:55:22 -0700
+
+AbstractController::ActionNotFound (The action 'index' could not be found for FriendshipsController):
+  
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.7ms)
+
+
+Started POST "/friendships?friend_id=2" for 127.0.0.1 at 2011-10-19 21:02:31 -0700
+
+AbstractController::ActionNotFound (The action 'index' could not be found for FriendshipsController):
+  
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-19 21:02:37 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (16.2ms)
+Rendered posts/_post.html.erb (7.5ms)
+Rendered users/_login.html.erb (0.7ms)
+Rendered posts/index.html.erb within layouts/posts (37.0ms)
+Completed 200 OK in 47ms (Views: 39.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-10-19 21:02:49 -0700
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered users/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 26ms (Views: 13.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-19 21:03:55 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (46.8ms)
+Rendered posts/_post.html.erb (8.3ms)
+Rendered users/_login.html.erb (8.0ms)
+Rendered posts/index.html.erb within layouts/posts (68.7ms)
+Completed 200 OK in 78ms (Views: 71.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/friendships" for 127.0.0.1 at 2011-10-19 21:04:17 -0700
+
+AbstractController::ActionNotFound (The action 'index' could not be found for FriendshipsController):
+  
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.7ms)
+
+
+Started GET "/usera" for 127.0.0.1 at 2011-10-19 21:04:24 -0700
+
+ActionController::RoutingError (No route matches "/usera"):
+  
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-10-19 21:04:26 -0700
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered users/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 28ms (Views: 14.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/friendships?friend_id=2" for 127.0.0.1 at 2011-10-19 21:04:30 -0700
+
+AbstractController::ActionNotFound (The action 'index' could not be found for FriendshipsController):
+  
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-10-19 21:06:31 -0700
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered users/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 26ms (Views: 13.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-19 21:06:34 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (15.8ms)
+Rendered posts/_post.html.erb (7.4ms)
+Rendered users/_login.html.erb (0.8ms)
+Rendered posts/index.html.erb within layouts/posts (36.7ms)
+Completed 200 OK in 46ms (Views: 39.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-10-19 21:06:42 -0700
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered users/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 26ms (Views: 12.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-10-19 21:06:45 -0700
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered users/show.html.erb within layouts/application (37.8ms)
+Completed   in 54ms
+
+ActionView::Template::Error (undefined method `friendships' for #<User:0x00000100be6170>):
+    2: 
+    3: <h2>Friends</h2>
+    4: <ul>
+    5: 	<% @user.friendships.each do |friendship| %>
+    6: 		<li>
+    7: 			<%= friendship.friend.username %>
+    8: 				<%= link_to "remove", friendship, :method => :delete %>
+  app/views/users/show.html.erb:5:in `_app_views_users_show_html_erb__1222558083919602502_2153692860_2923797888954910195'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-10-19 21:07:41 -0700
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+Rendered users/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 26ms (Views: 13.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/friendships?friend_id=2" for 127.0.0.1 at 2011-10-19 21:07:45 -0700
+
+AbstractController::ActionNotFound (The action 'index' could not be found for FriendshipsController):
+  
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-20 20:03:45 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered posts/_message_form.html.erb (46.3ms)
+Rendered posts/_post.html.erb (7.9ms)
+Rendered users/_login.html.erb (1.0ms)
+Rendered posts/index.html.erb within layouts/posts (113.7ms)
+Completed 200 OK in 123ms (Views: 116.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-10-20 20:03:49 -0700
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+Rendered users/index.html.erb within layouts/application (37.7ms)
+Completed 200 OK in 53ms (Views: 41.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/friendships?friend_id=2" for 127.0.0.1 at 2011-10-20 20:03:51 -0700
+
+AbstractController::ActionNotFound (The action 'index' could not be found for FriendshipsController):
+  
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-20 20:04:10 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered posts/_message_form.html.erb (45.1ms)
+Rendered posts/_post.html.erb (9.0ms)
+Rendered users/_login.html.erb (0.8ms)
+Rendered posts/index.html.erb within layouts/posts (68.8ms)
+Completed 200 OK in 79ms (Views: 71.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-10-20 20:05:06 -0700
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (8.0ms)
+Completed   in 24ms
+
+ActionView::Template::Error (undefined method `friendships' for #<User:0x000001030b7ff8>):
+    2: 
+    3: <h2>Friends</h2>
+    4: <ul>
+    5: 	<% @user.friendships.each do |friendship| %>
+    6: 		<li>
+    7: 			<%= friendship.friend.username %>
+    8: 				<%= link_to "remove", friendship, :method => :delete %>
+  app/views/users/show.html.erb:5:in `_app_views_users_show_html_erb__1222558083919602502_2172996120_2923797888954910195'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.8ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-10-20 20:28:15 -0700
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered users/show.html.erb within layouts/application (8.0ms)
+Completed   in 24ms
+
+ActionView::Template::Error (undefined method `friendships' for #<User:0x0000010318b2e0>):
+    2: 
+    3: <h2>Friends</h2>
+    4: <ul>
+    5: 	<% @user.friendships.each do |friendship| %>
+    6: 		<li>
+    7: 			<%= friendship.friend.username %>
+    8: 				<%= link_to "remove", friendship, :method => :delete %>
+  app/views/users/show.html.erb:5:in `_app_views_users_show_html_erb__1222558083919602502_2173417720_2923797888954910195'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.9ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-10-20 20:38:55 -0700
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (8.2ms)
+Completed   in 52ms
+
+ActionView::Template::Error (undefined method `friendships' for #<User:0x00000103226678>):
+    2: 
+    3: <h2>Friends</h2>
+    4: <ul>
+    5: 	<% @user.friendships.each do |friendship| %>
+    6: 		<li>
+    7: 			<%=h friendship.friend.username %>
+    8: 				<%= link_to "remove", friendship, :method => :delete %>
+  app/views/users/show.html.erb:5:in `_app_views_users_show_html_erb__1222558083919602502_2173514880_2923797888954910195'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.7ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-10-20 20:39:07 -0700
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered users/show.html.erb within layouts/application (8.3ms)
+Completed   in 53ms
+
+ActionView::Template::Error (undefined method `friendships' for #<User:0x000001032b8050>):
+    2: 
+    3: <h2>Friends</h2>
+    4: <ul>
+    5: 	<% @user.friendships.each do |friendship| %>
+    6: 		<li>
+    7: 			<%= friendship.friend.username %>
+    8: 				<%= link_to "remove", friendship, :method => :delete %>
+  app/views/users/show.html.erb:5:in `_app_views_users_show_html_erb__1222558083919602502_2174034380_2923797888954910195'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.1ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.9ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-10-20 20:39:08 -0700
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (37.0ms)
+Completed   in 53ms
+
+ActionView::Template::Error (undefined method `friendships' for #<User:0x00000100bcf3d0>):
+    2: 
+    3: <h2>Friends</h2>
+    4: <ul>
+    5: 	<% @user.friendships.each do |friendship| %>
+    6: 		<li>
+    7: 			<%= friendship.friend.username %>
+    8: 				<%= link_to "remove", friendship, :method => :delete %>
+  app/views/users/show.html.erb:5:in `_app_views_users_show_html_erb__1222558083919602502_2153629720_2923797888954910195'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.9ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.5ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-10-20 20:41:35 -0700
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered users/show.html.erb within layouts/application (9.2ms)
+Completed   in 25ms
+
+ActionView::Template::Error (undefined method `friendships' for #<User:0x00000100d64cb8>):
+    2: 
+    3: <h2>Friends</h2>
+    4: <ul>
+    5:   <% @user.friendships.each do |friendship| %>
+    6:     <li>
+    7:       <%=h friendship.friend.username %>
+    8:       - <%= link_to "remove", friendship, :method => :delete %>
+  app/views/users/show.html.erb:5:in `_app_views_users_show_html_erb__1222558083919602502_2154328580_2923797888954910195'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.9ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.9ms)
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/timmarkowski/rubys/work/twitter/config/routes.rb:1)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreatePosts (20111006040929)
+Migrating to CreateUsers (20111019023933)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+SQLite3::SQLException: table "users" already exists: CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) 
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-10-20 20:43:56 -0700
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (8.0ms)
+Completed   in 24ms
+
+ActionView::Template::Error (undefined method `friendships' for #<User:0x00000100f5e7f8>):
+    2: 
+    3: <h2>Friends</h2>
+    4: <ul>
+    5:   <% @user.friendships.each do |friendship| %>
+    6:     <li>
+    7:       <%= friendship.friend.username %>
+    8:       - <%= link_to "remove", friendship, :method => :delete %>
+  app/views/users/show.html.erb:5:in `_app_views_users_show_html_erb__1222558083919602502_2155503240_2923797888954910195'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.4ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.1ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-10-20 20:47:40 -0700
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered users/show.html.erb within layouts/application (8.1ms)
+Completed   in 24ms
+
+ActionView::Template::Error (undefined method `friendships' for #<User:0x00000100fe0bb8>):
+    2: 
+    3: <h2>Friends</h2>
+    4: <ul>
+    5:   <% @user.friendships.each do |friendship| %>
+    6:     <li>
+    7:       <%= friendship.friend.username %>
+    8:       <%= link_to "remove", friendship, :method => :delete %>
+  app/views/users/show.html.erb:5:in `_app_views_users_show_html_erb__1222558083919602502_2155778000_2923797888954910195'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (32.1ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (37.2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-10-20 20:59:21 -0700
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/timmarkowski/rubys/work/twitter/config/routes.rb:1)
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (8.9ms)
+Completed   in 26ms
+
+ActionView::Template::Error (undefined method `friendships' for #<User:0x000001030556a0>):
+    2: 
+    3: <h2>Friends</h2>
+    4: <ul>
+    5:   <% @user.friendships.each do |friendship| %>
+    6:     <li>
+    7:       <%= friendship.friend.username %>
+    8:       <%= link_to "remove", friendship, :method => :delete %>
+  app/views/users/show.html.erb:5:in `_app_views_users_show_html_erb__1222558083919602502_2172789740_2923797888954910195'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.7ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-10-20 20:59:22 -0700
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered users/show.html.erb within layouts/application (8.3ms)
+Completed   in 25ms
+
+ActionView::Template::Error (undefined method `friendships' for #<User:0x00000103117840>):
+    2: 
+    3: <h2>Friends</h2>
+    4: <ul>
+    5:   <% @user.friendships.each do |friendship| %>
+    6:     <li>
+    7:       <%= friendship.friend.username %>
+    8:       <%= link_to "remove", friendship, :method => :delete %>
+  app/views/users/show.html.erb:5:in `_app_views_users_show_html_erb__1222558083919602502_2173070020_2923797888954910195'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.1ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-10-20 21:01:07 -0700
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/timmarkowski/rubys/work/twitter/config/routes.rb:1)
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (36.8ms)
+Completed   in 53ms
+
+ActionView::Template::Error (undefined method `friendships' for #<User:0x00000100c2eab0>):
+    2: 
+    3: <h2>Friends</h2>
+    4: <ul>
+    5:   <% @user.friendships.each do |friendship| %>
+    6:     <li>
+    7:       <%= friendship.friend.username %>
+    8:       <%= link_to "remove", friendship, :method => :delete %>
+  app/views/users/show.html.erb:5:in `_app_views_users_show_html_erb__1222558083919602502_2153798300_2923797888954910195'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.9ms)
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/timmarkowski/rubys/work/twitter/config/routes.rb:1)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-20 21:02:49 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.7ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (18.0ms)
+Rendered posts/_post.html.erb (5.0ms)
+Rendered users/_login.html.erb (0.8ms)
+Rendered posts/index.html.erb within layouts/posts (45.0ms)
+Completed 200 OK in 157ms (Views: 48.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-10-20 21:02:53 -0700
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered users/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 27ms (Views: 13.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/friendships?friend_id=2" for 127.0.0.1 at 2011-10-20 21:02:55 -0700
+  Processing by FriendshipsController#create as HTML
+  Parameters: {"authenticity_token"=>"ppxYrfEFOFWHwNrwYt1IL/yGvatWRY+IXwfjfZNIgak=", "friend_id"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Completed   in 48ms
+
+NoMethodError (undefined method `friendships' for #<User:0x00000100b81540>):
+  app/controllers/friendships_controller.rb:3:in `create'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.1ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.5ms)
+
+
+Started POST "/friendships?friend_id=2" for 127.0.0.1 at 2011-10-20 21:03:35 -0700
+  Processing by FriendshipsController#create as HTML
+  Parameters: {"authenticity_token"=>"ppxYrfEFOFWHwNrwYt1IL/yGvatWRY+IXwfjfZNIgak=", "friend_id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed   in 45ms
+
+NoMethodError (undefined method `friendship' for #<User:0x0000010159a450>):
+  app/controllers/friendships_controller.rb:3:in `create'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.3ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started POST "/friendships?friend_id=2" for 127.0.0.1 at 2011-10-20 21:06:20 -0700
+  Processing by FriendshipsController#create as HTML
+  Parameters: {"authenticity_token"=>"ppxYrfEFOFWHwNrwYt1IL/yGvatWRY+IXwfjfZNIgak=", "friend_id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Completed   in 49ms
+
+NoMethodError (undefined method `friendships' for #<User:0x00000100b9b8f0>):
+  app/controllers/friendships_controller.rb:3:in `create'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.3ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.8ms)
+
+
+Started GET "/friendships?friend_id=1" for 127.0.0.1 at 2011-10-20 21:06:24 -0700
+
+AbstractController::ActionNotFound (The action 'index' could not be found for FriendshipsController):
+  
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.7ms)
+
+
+Started GET "/friendships?friend_id=2" for 127.0.0.1 at 2011-10-20 21:06:29 -0700
+
+AbstractController::ActionNotFound (The action 'index' could not be found for FriendshipsController):
+  
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.8ms)
+
+
+Started GET "/friendships?friend_id" for 127.0.0.1 at 2011-10-20 21:06:52 -0700
+
+AbstractController::ActionNotFound (The action 'index' could not be found for FriendshipsController):
+  
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.7ms)
+
+
+Started GET "/friendships" for 127.0.0.1 at 2011-10-20 21:06:57 -0700
+
+AbstractController::ActionNotFound (The action 'index' could not be found for FriendshipsController):
+  
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-20 21:07:01 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered posts/_message_form.html.erb (21.8ms)
+Rendered posts/_post.html.erb (9.8ms)
+Rendered users/_login.html.erb (0.9ms)
+Rendered posts/index.html.erb within layouts/posts (49.1ms)
+Completed 200 OK in 63ms (Views: 52.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2011-10-20 21:07:03 -0700
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-20 21:07:03 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+Rendered posts/_message_form.html.erb (0.5ms)
+Rendered posts/_post.html.erb (7.5ms)
+Rendered users/_login.html.erb (0.8ms)
+Rendered posts/index.html.erb within layouts/posts (14.6ms)
+Completed 200 OK in 25ms (Views: 17.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-10-20 21:07:08 -0700
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (7.5ms)
+Rendered users/new.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 55ms (Views: 42.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-10-20 21:07:21 -0700
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ppxYrfEFOFWHwNrwYt1IL/yGvatWRY+IXwfjfZNIgak=", "user"=>{"username"=>"ozzy", "email"=>"ozzy@meow.net", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."username" = 'ozzy') LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."email" = 'ozzy@meow.net') LIMIT 1[0m
+Completed   in 161ms
+
+NoMethodError (undefined method `has_many' for #<User:0x00000100f40b68>):
+  app/models/user.rb:33:in `prepare_password'
+  app/controllers/users_controller.rb:17:in `create'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-10-20 21:08:11 -0700
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ppxYrfEFOFWHwNrwYt1IL/yGvatWRY+IXwfjfZNIgak=", "user"=>{"username"=>"ozzy", "email"=>"ozzy@meow.net", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Completed   in 6ms
+
+SyntaxError (/Users/timmarkowski/rubys/work/twitter/app/models/user.rb:34: syntax error, unexpected ':', expecting ';' or '\n'
+      has_many :friendships
+                ^):
+  app/controllers/users_controller.rb:16:in `create'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.7ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.8ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-10-20 21:08:43 -0700
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ppxYrfEFOFWHwNrwYt1IL/yGvatWRY+IXwfjfZNIgak=", "user"=>{"username"=>"ozzy", "email"=>"ozzy@meow.net", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Completed   in 6ms
+
+SyntaxError (/Users/timmarkowski/rubys/work/twitter/app/models/user.rb:34: syntax error, unexpected ':', expecting ';' or '\n'
+      has_many :friendships
+                ^
+/Users/timmarkowski/rubys/work/twitter/app/models/user.rb:40: syntax error, unexpected keyword_end, expecting $end):
+  app/controllers/users_controller.rb:16:in `create'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-10-20 21:10:50 -0700
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ppxYrfEFOFWHwNrwYt1IL/yGvatWRY+IXwfjfZNIgak=", "user"=>{"username"=>"ozzy", "email"=>"ozzy@meow.net", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."username" = 'ozzy') LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."email" = 'ozzy@meow.net') LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("username", "email", "password_hash", "password_salt", "created_at", "updated_at") VALUES ('ozzy', 'ozzy@meow.net', '$2a$10$AHt4KeMeuJpL/9KPas7oPeqZHcMYyEijdI6NQe3lsAtGrblG1K/nq', '$2a$10$AHt4KeMeuJpL/9KPas7oPe', '2011-10-21 04:10:50.490735', '2011-10-21 04:10:50.490735')
+Redirected to http://localhost:3000/
+Completed 302 Found in 179ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-20 21:10:50 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+Rendered posts/_message_form.html.erb (53.2ms)
+Rendered posts/_post.html.erb (8.6ms)
+Rendered users/_login.html.erb (0.8ms)
+Rendered posts/index.html.erb within layouts/posts (76.1ms)
+Completed 200 OK in 87ms (Views: 78.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-10-20 21:10:55 -0700
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+Rendered users/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 31ms (Views: 13.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/friendships?friend_id=1" for 127.0.0.1 at 2011-10-20 21:10:57 -0700
+  Processing by FriendshipsController#create as HTML
+  Parameters: {"authenticity_token"=>"ppxYrfEFOFWHwNrwYt1IL/yGvatWRY+IXwfjfZNIgak=", "friend_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed   in 83ms
+
+ActiveRecord::StatementInvalid (Could not find table 'friendships'):
+  app/controllers/friendships_controller.rb:3:in `create'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.3ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.8ms)
+
+
+Started POST "/friendships?friend_id=2" for 127.0.0.1 at 2011-10-20 21:12:35 -0700
+  Processing by FriendshipsController#create as HTML
+  Parameters: {"authenticity_token"=>"ppxYrfEFOFWHwNrwYt1IL/yGvatWRY+IXwfjfZNIgak=", "friend_id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+Completed   in 61ms
+
+ActiveRecord::StatementInvalid (Could not find table 'friendships'):
+  app/controllers/friendships_controller.rb:3:in `create'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.1ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.3ms)
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/timmarkowski/rubys/work/twitter/config/routes.rb:1)
+
+
+Started POST "/friendships?friend_id=2" for 127.0.0.1 at 2011-10-20 21:12:49 -0700
+  Processing by FriendshipsController#create as HTML
+  Parameters: {"authenticity_token"=>"ppxYrfEFOFWHwNrwYt1IL/yGvatWRY+IXwfjfZNIgak=", "friend_id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed   in 75ms
+
+ActiveRecord::StatementInvalid (Could not find table 'friendships'):
+  app/controllers/friendships_controller.rb:3:in `create'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.6ms)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreatePosts (20111006040929)
+Migrating to CreateUsers (20111019023933)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+SQLite3::SQLException: table "users" already exists: CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) 
+
+
+Started POST "/friendships?friend_id=2" for 127.0.0.1 at 2011-10-20 21:15:57 -0700
+  Processing by FriendshipsController#create as HTML
+  Parameters: {"authenticity_token"=>"ppxYrfEFOFWHwNrwYt1IL/yGvatWRY+IXwfjfZNIgak=", "friend_id"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+Completed   in 64ms
+
+ActiveRecord::StatementInvalid (Could not find table 'friendships'):
+  app/controllers/friendships_controller.rb:3:in `create'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-20 21:16:03 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+Rendered posts/_message_form.html.erb (27.2ms)
+Rendered posts/_post.html.erb (8.3ms)
+Rendered users/_login.html.erb (0.8ms)
+Rendered posts/index.html.erb within layouts/posts (50.2ms)
+Completed 200 OK in 97ms (Views: 53.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-10-20 21:16:07 -0700
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+Rendered users/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 60ms (Views: 13.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/friendships?friend_id=2" for 127.0.0.1 at 2011-10-20 21:16:09 -0700
+  Processing by FriendshipsController#create as HTML
+  Parameters: {"authenticity_token"=>"ppxYrfEFOFWHwNrwYt1IL/yGvatWRY+IXwfjfZNIgak=", "friend_id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed   in 62ms
+
+ActiveRecord::StatementInvalid (Could not find table 'friendships'):
+  app/controllers/friendships_controller.rb:3:in `create'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.1ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.8ms)
+
+
+Started POST "/friendships?friend_id=1" for 127.0.0.1 at 2011-10-20 21:16:32 -0700
+  Processing by FriendshipsController#create as HTML
+  Parameters: {"authenticity_token"=>"ppxYrfEFOFWHwNrwYt1IL/yGvatWRY+IXwfjfZNIgak=", "friend_id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+Completed   in 62ms
+
+ActiveRecord::StatementInvalid (Could not find table 'friendships'):
+  app/controllers/friendships_controller.rb:3:in `create'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.5ms)
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/timmarkowski/rubys/work/twitter/config/routes.rb:1)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreatePosts (20111006040929)
+Migrating to CreateUsers (20111019023933)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+SQLite3::SQLException: table "users" already exists: CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) 
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/timmarkowski/rubys/work/twitter/config/routes.rb:1)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreatePosts (20111006040929)
+Migrating to CreateUsers (20111019023933)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+SQLite3::SQLException: table "users" already exists: CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) 
+
+
+Started POST "/friendships?friend_id=1" for 127.0.0.1 at 2011-10-20 21:21:46 -0700
+DEPRECATION WARNING: ActionController::Routing::Routes is deprecated. Instead, use Rails.application.routes. (called from <top (required)> at /Users/timmarkowski/rubys/work/twitter/config/routes.rb:1)
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/timmarkowski/rubys/work/twitter/config/routes.rb:1)
+  Processing by FriendshipsController#create as HTML
+  Parameters: {"authenticity_token"=>"ppxYrfEFOFWHwNrwYt1IL/yGvatWRY+IXwfjfZNIgak=", "friend_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed   in 34ms
+
+ActiveRecord::StatementInvalid (Could not find table 'friendships'):
+  app/controllers/friendships_controller.rb:3:in `create'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.7ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (40.5ms)
+
+
+Started POST "/friendships?friend_id=1" for 127.0.0.1 at 2011-10-20 21:21:53 -0700
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/timmarkowski/rubys/work/twitter/config/routes.rb:1)
+  Processing by FriendshipsController#create as HTML
+  Parameters: {"authenticity_token"=>"ppxYrfEFOFWHwNrwYt1IL/yGvatWRY+IXwfjfZNIgak=", "friend_id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+Completed   in 34ms
+
+ActiveRecord::StatementInvalid (Could not find table 'friendships'):
+  app/controllers/friendships_controller.rb:3:in `create'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.5ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-20 21:21:59 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+Rendered posts/_message_form.html.erb (20.7ms)
+Rendered posts/_post.html.erb (8.0ms)
+Rendered users/_login.html.erb (1.0ms)
+Rendered posts/index.html.erb within layouts/posts (83.1ms)
+Completed 200 OK in 93ms (Views: 85.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2011-10-20 21:22:02 -0700
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mFriendship Load (0.3ms)[0m  SELECT "friendships".* FROM "friendships" WHERE ("friendships".user_id = 3)
+SQLite3::SQLException: no such table: friendships: SELECT "friendships".* FROM "friendships" WHERE ("friendships".user_id = 3)
+Rendered users/show.html.erb within layouts/application (58.4ms)
+Completed   in 78ms
+
+ActionView::Template::Error (SQLite3::SQLException: no such table: friendships: SELECT "friendships".* FROM "friendships" WHERE ("friendships".user_id = 3)):
+    2: 
+    3: <h2>Friends</h2>
+    4: <ul>
+    5:   <% @user.friendships.each do |friendship| %>
+    6:     <li>
+    7:       <%= friendship.friend.username %>
+    8:       <%= link_to "remove", friendship, :method => :delete %>
+  app/views/users/show.html.erb:5:in `_app_views_users_show_html_erb__3728122718035046945_2155669720__860556670171311461'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (30.4ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.8ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (37.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-10-20 21:22:28 -0700
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+Rendered users/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 30ms (Views: 13.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/friendships?friend_id=2" for 127.0.0.1 at 2011-10-20 21:22:29 -0700
+  Processing by FriendshipsController#create as HTML
+  Parameters: {"authenticity_token"=>"ppxYrfEFOFWHwNrwYt1IL/yGvatWRY+IXwfjfZNIgak=", "friend_id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed   in 32ms
+
+ActiveRecord::StatementInvalid (Could not find table 'friendships'):
+  app/controllers/friendships_controller.rb:3:in `create'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.7ms)
+
+
+Started POST "/friendships?friend_id=2" for 127.0.0.1 at 2011-10-20 21:26:31 -0700
+  Processing by FriendshipsController#create as HTML
+  Parameters: {"authenticity_token"=>"ppxYrfEFOFWHwNrwYt1IL/yGvatWRY+IXwfjfZNIgak=", "friend_id"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+Completed   in 33ms
+
+ActiveRecord::StatementInvalid (Could not find table 'friendships'):
+  app/controllers/friendships_controller.rb:3:in `create'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.6ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.4ms)
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/timmarkowski/rubys/work/twitter/config/routes.rb:1)
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreatePosts (20111006040929)
+Migrating to CreateUsers (20111019023933)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+SQLite3::SQLException: table "users" already exists: CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) 
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/timmarkowski/rubys/work/twitter/config/routes.rb:1)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/timmarkowski/rubys/work/twitter/config/routes.rb:1)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreatePosts (20111006040929)
+Migrating to CreateUsers (20111019023933)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+SQLite3::SQLException: table "users" already exists: CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) 
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/timmarkowski/rubys/work/twitter/config/routes.rb:1)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/timmarkowski/rubys/work/twitter/config/routes.rb:1)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreatePosts (20111006040929)
+Migrating to CreateUsers (20111019023933)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+SQLite3::SQLException: table "users" already exists: CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) 
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/timmarkowski/rubys/work/twitter/config/routes.rb:1)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreatePosts (20111006040929)
+Migrating to CreateUsers (20111019023933)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+SQLite3::SQLException: table "users" already exists: CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) 
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/timmarkowski/rubys/work/twitter/config/routes.rb:1)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreatePosts (20111006040929)
+Migrating to CreateUsers (20111019023933)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+SQLite3::SQLException: table "users" already exists: CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) 
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/timmarkowski/rubys/work/twitter/config/routes.rb:1)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreatePosts (20111006040929)
+Migrating to CreateUsers (20111019023933)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+SQLite3::SQLException: table "users" already exists: CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) 
+
+
+Started POST "/friendships?friend_id=2" for 127.0.0.1 at 2011-10-20 21:38:00 -0700
+  Processing by FriendshipsController#create as HTML
+  Parameters: {"authenticity_token"=>"ppxYrfEFOFWHwNrwYt1IL/yGvatWRY+IXwfjfZNIgak=", "friend_id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed   in 34ms
+
+ActiveRecord::StatementInvalid (Could not find table 'friendships'):
+  app/controllers/friendships_controller.rb:3:in `create'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.3ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/timmarkowski/rubys/work/twitter/config/routes.rb:1)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreatePosts (20111006040929)
+Migrating to CreateUsers (20111019023933)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+SQLite3::SQLException: table "users" already exists: CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) 
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/timmarkowski/rubys/work/twitter/config/routes.rb:1)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/timmarkowski/rubys/work/twitter/config/routes.rb:1)
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreatePosts (20111006040929)
+Migrating to CreateUsers (20111019023933)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+SQLite3::SQLException: table "users" already exists: CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) 
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/timmarkowski/rubys/work/twitter/config/routes.rb:1)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreatePosts (20111006040929)
+Migrating to CreateFriendships (20111019043748)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE TABLE "friendships" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "friend_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20111019043748')
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("friendships")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("posts")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("users")
+
+
+Started POST "/friendships?friend_id=2" for 127.0.0.1 at 2011-10-20 21:47:07 -0700
+  Processing by FriendshipsController#create as HTML
+  Parameters: {"authenticity_token"=>"ppxYrfEFOFWHwNrwYt1IL/yGvatWRY+IXwfjfZNIgak=", "friend_id"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "friendships" ("user_id", "friend_id", "created_at", "updated_at") VALUES (3, 2, '2011-10-21 04:47:07.696906', '2011-10-21 04:47:07.696906')
+Redirected to http://localhost:3000/
+Completed 302 Found in 80ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-20 21:47:07 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.7ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+Rendered posts/_message_form.html.erb (22.6ms)
+Rendered posts/_post.html.erb (8.5ms)
+Rendered users/_login.html.erb (1.0ms)
+Rendered posts/index.html.erb within layouts/posts (106.1ms)
+Completed 200 OK in 121ms (Views: 109.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-10-20 21:47:12 -0700
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+Rendered users/index.html.erb within layouts/application (38.6ms)
+Completed 200 OK in 60ms (Views: 42.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/friendships?friend_id=1" for 127.0.0.1 at 2011-10-20 21:47:14 -0700
+  Processing by FriendshipsController#create as HTML
+  Parameters: {"authenticity_token"=>"ppxYrfEFOFWHwNrwYt1IL/yGvatWRY+IXwfjfZNIgak=", "friend_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "friendships" ("user_id", "friend_id", "created_at", "updated_at") VALUES (3, 1, '2011-10-21 04:47:14.273103', '2011-10-21 04:47:14.273103')[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 76ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-20 21:47:14 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (20.8ms)
+Rendered posts/_post.html.erb (8.0ms)
+Rendered users/_login.html.erb (0.8ms)
+Rendered posts/index.html.erb within layouts/posts (74.4ms)
+Completed 200 OK in 86ms (Views: 77.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2011-10-20 21:47:17 -0700
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mFriendship Load (0.3ms)[0m  [1mSELECT "friendships".* FROM "friendships" WHERE ("friendships".user_id = 3)[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (63.7ms)
+Completed 200 OK in 84ms (Views: 67.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-10-20 21:47:22 -0700
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered users/index.html.erb within layouts/application (38.7ms)
+Completed 200 OK in 59ms (Views: 42.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-10-20 21:47:40 -0700
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered users/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 30ms (Views: 14.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/friendships?friend_id=2" for 127.0.0.1 at 2011-10-20 21:47:42 -0700
+  Processing by FriendshipsController#create as HTML
+  Parameters: {"authenticity_token"=>"ppxYrfEFOFWHwNrwYt1IL/yGvatWRY+IXwfjfZNIgak=", "friend_id"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "friendships" ("user_id", "friend_id", "created_at", "updated_at") VALUES (3, 2, '2011-10-21 04:47:42.469860', '2011-10-21 04:47:42.469860')
+Redirected to http://localhost:3000/
+Completed 302 Found in 48ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-20 21:47:42 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+Rendered posts/_message_form.html.erb (22.0ms)
+Rendered posts/_post.html.erb (8.0ms)
+Rendered users/_login.html.erb (0.9ms)
+Rendered posts/index.html.erb within layouts/posts (73.5ms)
+Completed 200 OK in 83ms (Views: 76.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2011-10-20 21:47:46 -0700
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mFriendship Load (0.3ms)[0m  SELECT "friendships".* FROM "friendships" WHERE ("friendships".user_id = 3)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (63.3ms)
+Completed 200 OK in 83ms (Views: 66.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/friendships/1" for 127.0.0.1 at 2011-10-20 21:47:50 -0700
+  Processing by FriendshipsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ppxYrfEFOFWHwNrwYt1IL/yGvatWRY+IXwfjfZNIgak=", "id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFriendship Load (0.1ms)[0m  SELECT "friendships".* FROM "friendships" WHERE ("friendships".user_id = 3) AND ("friendships"."id" = 1) LIMIT 1
+  [1m[36mAREL (0.4ms)[0m  [1mDELETE FROM "friendships" WHERE ("friendships"."id" = 1)[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 77ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-20 21:47:50 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.9ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (21.4ms)
+Rendered posts/_post.html.erb (8.8ms)
+Rendered users/_login.html.erb (0.8ms)
+Rendered posts/index.html.erb within layouts/posts (73.8ms)
+Completed 200 OK in 88ms (Views: 76.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2011-10-20 21:47:53 -0700
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mFriendship Load (0.3ms)[0m  [1mSELECT "friendships".* FROM "friendships" WHERE ("friendships".user_id = 3)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (64.3ms)
+Completed 200 OK in 84ms (Views: 67.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-10-20 21:47:56 -0700
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered users/index.html.erb within layouts/application (40.3ms)
+Completed 200 OK in 61ms (Views: 44.2ms | ActiveRecord: 0.3ms)
