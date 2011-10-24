@@ -13796,3 +13796,1974 @@ Rendered posts/_post.html.erb (8.2ms)
 Rendered users/_login.html.erb (0.8ms)
 Rendered posts/index.html.erb within layouts/posts (74.1ms)
 Completed 200 OK in 85ms (Views: 76.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-20 22:21:44 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (21.1ms)
+Rendered posts/_post.html.erb (5.6ms)
+Rendered posts/index.html.erb within layouts/posts (29.2ms)
+Completed   in 67ms
+
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= @user.username.show %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2158158060__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2158158060__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2151800100__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.9ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-20 22:21:59 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (20.3ms)
+Rendered posts/_post.html.erb (8.5ms)
+Rendered users/_login.html.erb (0.8ms)
+Rendered posts/index.html.erb within layouts/posts (73.2ms)
+Completed 200 OK in 83ms (Views: 75.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-20 22:22:39 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (51.8ms)
+Rendered posts/_post.html.erb (8.2ms)
+Rendered users/_login.html.erb (0.8ms)
+Rendered posts/index.html.erb within layouts/posts (73.7ms)
+Completed 200 OK in 84ms (Views: 76.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-20 22:22:51 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (21.8ms)
+Rendered posts/_post.html.erb (6.0ms)
+Rendered posts/index.html.erb within layouts/posts (30.2ms)
+Completed   in 40ms
+
+ActionView::Template::Error (undefined method `show' for nil:NilClass):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= @user.show %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2157139280__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2157139280__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2158872960__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.5ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-20 22:24:12 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (19.8ms)
+Rendered posts/_post.html.erb (59.1ms)
+Rendered posts/index.html.erb within layouts/posts (81.3ms)
+Completed   in 91ms
+
+ActionView::Template::Error (undefined local variable or method `username' for #<#<Class:0x0000010126bc98>:0x00000101268b10>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= username %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2154610320__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2154610320__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2157128780__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.7ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-20 22:28:48 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (21.6ms)
+Rendered posts/_post.html.erb (6.1ms)
+Rendered posts/index.html.erb within layouts/posts (30.2ms)
+Completed   in 41ms
+
+ActionView::Template::Error (undefined method `created_by' for #<Post:0x000001015a23f8>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= post.created_by %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2156522980__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2156522980__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2158786020__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.9ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (42.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-20 22:29:12 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (19.8ms)
+Rendered posts/_post.html.erb (5.9ms)
+Rendered posts/index.html.erb within layouts/posts (28.0ms)
+Completed   in 38ms
+
+ActionView::Template::Error (undefined method `created_by' for #<Post:0x00000101182cc8>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= user_name(post.created_by) %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2154153900__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2154153900__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2155706980__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-20 22:30:01 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (51.0ms)
+Rendered posts/_post.html.erb (5.9ms)
+Rendered posts/index.html.erb within layouts/posts (59.3ms)
+Completed   in 70ms
+
+ActionView::Template::Error (undefined method `user' for #<Post:0x00000100d874c0>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= post.user %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2158608860__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2158608860__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2154524000__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.1ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-20 22:31:58 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (20.4ms)
+Rendered posts/_post.html.erb (5.7ms)
+Rendered posts/index.html.erb within layouts/posts (28.6ms)
+Completed   in 39ms
+
+ActionView::Template::Error (undefined method `current_user' for #<Post:0x00000101540270>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= post.current_user %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2155555920__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2155555920__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2158576520__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (35.7ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (40.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-20 22:32:12 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (20.3ms)
+Rendered posts/_post.html.erb (36.8ms)
+Rendered posts/index.html.erb within layouts/posts (59.6ms)
+Completed   in 69ms
+
+ActionView::Template::Error (undefined method `current_user' for #<Post:0x00000100f7aed0>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= post.current_user %></p>
+    4: 	<p><%= post.messages %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2153514500__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2153514500__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2155555020__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.6ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-20 22:32:31 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (49.8ms)
+Rendered posts/_post.html.erb (6.1ms)
+Rendered posts/index.html.erb within layouts/posts (58.4ms)
+Completed   in 68ms
+
+ActionView::Template::Error (undefined method `messages' for #<Post:0x00000100bec5c0>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	
+    4: 	<p><%= post.messages %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:4:in `block in _app_views_posts__post_html_erb___1196359535291019152_2158390720__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2158390720__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2153614080__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.6ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-20 22:32:36 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (21.6ms)
+Rendered posts/_post.html.erb (8.1ms)
+Rendered users/_login.html.erb (1.0ms)
+Rendered posts/index.html.erb within layouts/posts (78.6ms)
+Completed 200 OK in 88ms (Views: 81.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-20 22:33:00 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (48.5ms)
+Rendered posts/_post.html.erb (6.1ms)
+Rendered posts/index.html.erb within layouts/posts (57.2ms)
+Completed   in 67ms
+
+ActionView::Template::Error (undefined method `user' for #<Post:0x00000100eb22c8>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= post.user %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2154607080__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2154607080__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2155154660__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.3ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-20 22:36:31 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (23.5ms)
+Rendered posts/_post.html.erb (6.8ms)
+Rendered posts/index.html.erb within layouts/posts (33.4ms)
+Completed   in 74ms
+
+ActionView::Template::Error (undefined method `user' for #<Post:0x00000100dfb7f8>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= post.user %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2158079320__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2158079320__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2155671400__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.5ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-20 22:36:33 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (20.7ms)
+Rendered posts/_post.html.erb (8.2ms)
+Rendered users/_login.html.erb (0.8ms)
+Rendered posts/index.html.erb within layouts/posts (72.8ms)
+Completed 200 OK in 83ms (Views: 75.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-20 22:40:24 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (48.3ms)
+Rendered posts/_post.html.erb (7.9ms)
+Rendered users/_login.html.erb (0.8ms)
+Rendered posts/index.html.erb within layouts/posts (69.8ms)
+Completed 200 OK in 79ms (Views: 72.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-20 22:40:35 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (21.1ms)
+Rendered posts/_post.html.erb (6.0ms)
+Rendered posts/index.html.erb within layouts/posts (29.6ms)
+Completed   in 40ms
+
+ActionView::Template::Error (undefined method `user' for #<Post:0x00000101501fc0>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= post.user %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2155476100__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2155476100__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2158446540__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (35.9ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (41.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-20 22:43:02 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (51.5ms)
+Rendered posts/_post.html.erb (6.5ms)
+Rendered posts/index.html.erb within layouts/posts (60.5ms)
+Completed   in 70ms
+
+ActionView::Template::Error (undefined method `user' for #<Post:0x00000100ea2c60>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= post.user %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2159167720__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2159167720__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2155126840__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.4ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-20 22:43:03 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (28.7ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (22.0ms)
+Rendered posts/_post.html.erb (6.2ms)
+Rendered posts/index.html.erb within layouts/posts (30.8ms)
+Completed   in 69ms
+
+ActionView::Template::Error (undefined method `user' for #<Post:0x000001015b4a30>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= post.user %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2158036840__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2158036840__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2159166820__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.5ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-20 22:44:45 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (21.6ms)
+Rendered posts/_post.html.erb (59.2ms)
+Rendered posts/index.html.erb within layouts/posts (83.4ms)
+Completed   in 93ms
+
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x00000101422028>:0x0000010141d910>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= user.user %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2154861760__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2154861760__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2158021940__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.9ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-20 22:45:15 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (20.1ms)
+Rendered posts/_post.html.erb (28.0ms)
+Rendered posts/index.html.erb within layouts/posts (50.6ms)
+Completed   in 61ms
+
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x000001015af5d0>:0x000001015ab430>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= user.current_user %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2156865440__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2156865440__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2158839260__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-20 22:45:33 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (51.8ms)
+Rendered posts/_post.html.erb (28.1ms)
+Rendered posts/index.html.erb within layouts/posts (83.0ms)
+Completed   in 95ms
+
+ActionView::Template::Error (undefined local variable or method `users' for #<#<Class:0x00000100d72a98>:0x00000100d6e2e0>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= users.current_user %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2158610000__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2158610000__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2154519220__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (30.8ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (35.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-20 22:45:39 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (21.2ms)
+Rendered posts/_post.html.erb (39.4ms)
+Rendered users/_login.html.erb (0.8ms)
+Rendered posts/index.html.erb within layouts/posts (75.4ms)
+Completed 200 OK in 85ms (Views: 78.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-20 22:46:16 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (20.1ms)
+Rendered posts/_post.html.erb (28.8ms)
+Rendered posts/index.html.erb within layouts/posts (51.3ms)
+Completed   in 89ms
+
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x000001016512b8>:0x0000010164ba98>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= user.current_user %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2157984040__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2157984040__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2159168260__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-20 22:46:26 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (50.9ms)
+Rendered posts/_post.html.erb (14.3ms)
+Rendered posts/index.html.erb within layouts/posts (67.8ms)
+Completed   in 79ms
+
+ActionView::Template::Error (undefined method `user' for #<User:0x000001015af490>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= current_user.user %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2158821400__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2158821400__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2154753560__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.1ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-20 22:46:37 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (20.4ms)
+Rendered posts/_post.html.erb (57.2ms)
+Rendered posts/index.html.erb within layouts/posts (80.1ms)
+Completed   in 90ms
+
+ActionView::Template::Error (undefined local variable or method `show' for #<#<Class:0x000001014b53a0>:0x000001014aff90>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= show.current_user %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2155147400__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2155147400__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2158325120__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.9ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-20 22:46:43 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (22.2ms)
+Rendered posts/_post.html.erb (8.1ms)
+Rendered users/_login.html.erb (0.8ms)
+Rendered posts/index.html.erb within layouts/posts (43.9ms)
+Completed 200 OK in 82ms (Views: 46.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-20 22:48:17 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (20.7ms)
+Rendered posts/_post.html.erb (58.1ms)
+Rendered posts/index.html.erb within layouts/posts (81.3ms)
+Completed   in 92ms
+
+ActionView::Template::Error (undefined local variable or method `user_id' for #<#<Class:0x00000100faeb40>:0x00000100faace8>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= user_id %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2153904700__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2153904700__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2155692400__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-20 22:48:28 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (21.6ms)
+Rendered posts/_post.html.erb (58.9ms)
+Rendered posts/index.html.erb within layouts/posts (83.4ms)
+Completed   in 93ms
+
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x000001014d62f8>:0x000001014d0088>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= user.user_id %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2155240420__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2155240420__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2158390480__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.1ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-20 22:49:05 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (27.1ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (21.6ms)
+Rendered posts/_post.html.erb (28.7ms)
+Rendered posts/index.html.erb within layouts/posts (52.9ms)
+Completed   in 90ms
+
+ActionView::Template::Error (undefined local variable or method `user_id' for #<#<Class:0x00000101650d40>:0x0000010164b5c0>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= user_id %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2158020000__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2158020000__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2159167840__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-20 22:49:14 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (51.7ms)
+Rendered posts/_post.html.erb (8.5ms)
+Rendered users/_login.html.erb (0.8ms)
+Rendered posts/index.html.erb within layouts/posts (74.4ms)
+Completed 200 OK in 84ms (Views: 77.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-20 22:54:56 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (21.5ms)
+Rendered posts/_post.html.erb (57.8ms)
+Rendered posts/index.html.erb within layouts/posts (81.7ms)
+Completed   in 92ms
+
+ActionView::Template::Error (undefined local variable or method `username' for #<#<Class:0x000001014e9380>:0x000001014e0ac8>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= username %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2155220460__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2155220460__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2158417800__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.9ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-20 22:56:47 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (20.2ms)
+Rendered posts/_post.html.erb (7.6ms)
+Rendered posts/index.html.erb within layouts/posts (30.3ms)
+Completed   in 68ms
+
+ActionView::Template::Error (undefined method `user' for #<Array:0x00000101628ac0>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= @posts.user.username %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2157396620__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2157396620__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2159068680__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.4ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-20 22:59:27 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (20.1ms)
+Rendered posts/_post.html.erb (37.9ms)
+Rendered posts/index.html.erb within layouts/posts (60.5ms)
+Completed   in 72ms
+
+ActionView::Template::Error (undefined method `user' for #<Array:0x0000010104f450>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= @posts.user.username %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2154032320__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2154032320__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2155674680__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.7ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-20 22:59:38 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (48.7ms)
+Rendered posts/_post.html.erb (6.7ms)
+Rendered posts/index.html.erb within layouts/posts (57.8ms)
+Completed   in 69ms
+
+ActionView::Template::Error (undefined method `user' for #<Array:0x00000100bbb3a8>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= @posts.user %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2158363820__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2158363820__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2153545840__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-20 22:59:44 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (21.1ms)
+Rendered posts/_post.html.erb (54.2ms)
+Rendered users/_login.html.erb (1.3ms)
+Rendered posts/index.html.erb within layouts/posts (142.7ms)
+Completed 200 OK in 154ms (Views: 145.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-20 23:01:17 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (22.5ms)
+Rendered posts/_post.html.erb (8.2ms)
+Rendered users/_login.html.erb (0.8ms)
+Rendered posts/index.html.erb within layouts/posts (44.7ms)
+Completed 200 OK in 56ms (Views: 47.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-20 23:01:23 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (21.0ms)
+Rendered posts/_post.html.erb (38.0ms)
+Rendered posts/index.html.erb within layouts/posts (61.4ms)
+Completed   in 74ms
+
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= @user.username %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2153362780__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2153362780__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2155514340__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.6ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-20 23:01:33 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (47.6ms)
+Rendered posts/_post.html.erb (8.4ms)
+Rendered users/_login.html.erb (0.8ms)
+Rendered posts/index.html.erb within layouts/posts (70.7ms)
+Completed 200 OK in 82ms (Views: 73.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-20 23:01:43 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (20.2ms)
+Rendered posts/_post.html.erb (8.4ms)
+Rendered users/_login.html.erb (0.8ms)
+Rendered posts/index.html.erb within layouts/posts (71.3ms)
+Completed 200 OK in 82ms (Views: 73.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-20 23:04:16 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (51.9ms)
+Rendered posts/_post.html.erb (9.0ms)
+Rendered users/_login.html.erb (0.9ms)
+Rendered posts/index.html.erb within layouts/posts (97.7ms)
+Completed 200 OK in 109ms (Views: 100.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-20 23:04:38 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (20.1ms)
+Rendered posts/_post.html.erb (46.3ms)
+Rendered users/_login.html.erb (0.7ms)
+Rendered posts/index.html.erb within layouts/posts (72.5ms)
+Completed 200 OK in 83ms (Views: 75.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2011-10-20 23:04:48 -0700
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-20 23:04:48 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+Rendered posts/_message_form.html.erb (0.5ms)
+Rendered posts/_post.html.erb (5.9ms)
+Rendered posts/index.html.erb within layouts/posts (8.8ms)
+Completed   in 20ms
+
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= current_user.username %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2158194280__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2158194280__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2158304840__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-20 23:05:26 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.7ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+Rendered posts/_message_form.html.erb (0.5ms)
+Rendered posts/_post.html.erb (8.1ms)
+Rendered users/_login.html.erb (1.1ms)
+Rendered posts/index.html.erb within layouts/posts (32.3ms)
+Completed 200 OK in 45ms (Views: 35.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 14:32:00 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+Rendered posts/_message_form.html.erb (0.7ms)
+Rendered posts/_post.html.erb (11.3ms)
+Rendered users/_login.html.erb (1.6ms)
+Rendered posts/index.html.erb within layouts/posts (94.7ms)
+Completed 200 OK in 138ms (Views: 119.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2011-10-23 14:32:04 -0700
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-10-23 14:32:18 -0700
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5ZqkFaP5/Jtr7NzkRJYMGYILH+u2S5r92gDNzff7wtc=", "login"=>"markow", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."username" = 'markow') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 247ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 14:32:18 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (20.7ms)
+Rendered posts/_post.html.erb (7.8ms)
+Rendered users/_login.html.erb (0.8ms)
+Rendered posts/index.html.erb within layouts/posts (42.6ms)
+Completed 200 OK in 55ms (Views: 45.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 21:25:48 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (22.3ms)
+Rendered posts/_post.html.erb (82.2ms)
+Rendered posts/index.html.erb within layouts/posts (107.1ms)
+Completed   in 118ms
+
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x00000101569120>:0x0000010155fa80>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= user.user_id %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2155567320__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2155567320__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2158683500__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 21:26:05 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (52.5ms)
+Rendered posts/_post.html.erb (27.9ms)
+Rendered posts/index.html.erb within layouts/posts (82.9ms)
+Completed   in 94ms
+
+ActionView::Template::Error (undefined local variable or method `user_id' for #<#<Class:0x00000100d98e28>:0x00000100d94350>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= user_id %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2189597220__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2189597220__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2154597260__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.9ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 21:31:17 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (51.6ms)
+Rendered posts/_post.html.erb (7.8ms)
+Rendered users/_login.html.erb (1.1ms)
+Rendered posts/index.html.erb within layouts/posts (123.9ms)
+Completed 200 OK in 135ms (Views: 126.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 21:32:41 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (21.2ms)
+Rendered posts/_post.html.erb (14.6ms)
+Rendered posts/index.html.erb within layouts/posts (39.3ms)
+Completed   in 51ms
+
+ActionView::Template::Error (undefined method `user_id' for #<User:0x0000010153e998>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= current_user.user_id %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2158555300__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2158555300__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2177325180__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (40.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 21:32:55 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (22.1ms)
+Rendered posts/_post.html.erb (60.4ms)
+Rendered posts/index.html.erb within layouts/posts (85.0ms)
+Completed   in 96ms
+
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x000001015b6b00>:0x000001015b2988>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= user.current_user %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2155683900__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2155683900__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2158855340__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 21:34:03 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (53.3ms)
+Rendered posts/_post.html.erb (8.5ms)
+Rendered users/_login.html.erb (0.8ms)
+Rendered posts/index.html.erb within layouts/posts (75.9ms)
+Completed 200 OK in 87ms (Views: 78.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 21:36:08 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (50.4ms)
+Rendered posts/_post.html.erb (26.6ms)
+Rendered posts/index.html.erb within layouts/posts (79.3ms)
+Completed   in 90ms
+
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x00000100f4ccd8>:0x00000100f49f38>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= user.id %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2177620340__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2177620340__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2155496340__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 21:37:29 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (21.5ms)
+Rendered posts/_post.html.erb (27.4ms)
+Rendered posts/index.html.erb within layouts/posts (51.4ms)
+Completed   in 63ms
+
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x000001039f4990>:0x000001039f2cd0>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= user %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2159171160__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2159171160__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2177862980__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (35.6ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (40.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 21:37:46 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (21.8ms)
+Rendered posts/_post.html.erb (8.1ms)
+Rendered users/_login.html.erb (0.8ms)
+Rendered posts/index.html.erb within layouts/posts (75.4ms)
+Completed 200 OK in 87ms (Views: 78.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 21:40:03 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (53.0ms)
+Rendered posts/_post.html.erb (6.5ms)
+Rendered posts/index.html.erb within layouts/posts (61.9ms)
+Completed   in 73ms
+
+ActionView::Template::Error (undefined method `user_id' for #<Post:0x00000101454190>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= post.user_id %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2189602280__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2189602280__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2158108260__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.4ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 21:40:16 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (53.2ms)
+Rendered posts/_post.html.erb (6.8ms)
+Rendered posts/index.html.erb within layouts/posts (62.5ms)
+Completed   in 74ms
+
+ActionView::Template::Error (undefined method `user' for #<Post:0x00000100fa2fe8>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= post.user %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2189622380__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2189622380__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2155655280__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.3ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 21:46:15 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (51.6ms)
+Rendered posts/_post.html.erb (8.0ms)
+Rendered users/_login.html.erb (0.7ms)
+Rendered posts/index.html.erb within layouts/posts (73.2ms)
+Completed 200 OK in 84ms (Views: 75.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 21:46:23 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (52.1ms)
+Rendered posts/_post.html.erb (26.2ms)
+Rendered posts/index.html.erb within layouts/posts (80.9ms)
+Completed   in 92ms
+
+ActionView::Template::Error (undefined local variable or method `post_id' for #<#<Class:0x00000100f3f4c0>:0x00000100f3c5e0>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= post_id %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2177495460__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2177495460__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2155254180__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.7ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 21:46:27 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (21.3ms)
+Rendered posts/_post.html.erb (8.3ms)
+Rendered users/_login.html.erb (0.8ms)
+Rendered posts/index.html.erb within layouts/posts (43.8ms)
+Completed 200 OK in 55ms (Views: 46.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 21:51:54 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (20.3ms)
+Rendered posts/_post.html.erb (57.7ms)
+Rendered posts/index.html.erb within layouts/posts (80.4ms)
+Completed   in 91ms
+
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x0000010163ac70>:0x00000101634ff0>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= user %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2157380220__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2157380220__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2159119480__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 21:51:58 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (51.5ms)
+Rendered posts/_post.html.erb (26.3ms)
+Rendered posts/index.html.erb within layouts/posts (80.2ms)
+Completed   in 91ms
+
+ActionView::Template::Error (undefined local variable or method `users' for #<#<Class:0x00000100e49430>:0x00000100e43558>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= users %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2189632740__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2189632740__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2154957820__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 21:52:16 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (52.5ms)
+Rendered posts/_post.html.erb (6.2ms)
+Rendered posts/index.html.erb within layouts/posts (61.2ms)
+Completed   in 72ms
+
+ActionView::Template::Error (undefined method `user_id' for #<Post:0x00000100bdb860>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= post.user_id %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2177827160__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2177827160__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2153582920__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.5ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 21:52:24 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (52.2ms)
+Rendered posts/_post.html.erb (7.8ms)
+Rendered users/_login.html.erb (0.9ms)
+Rendered posts/index.html.erb within layouts/posts (74.1ms)
+Completed 200 OK in 85ms (Views: 76.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 21:53:54 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (19.7ms)
+Rendered posts/_post.html.erb (8.1ms)
+Rendered users/_login.html.erb (0.8ms)
+Rendered posts/index.html.erb within layouts/posts (41.8ms)
+Completed 200 OK in 52ms (Views: 44.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 21:57:01 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (20.1ms)
+Rendered posts/_post.html.erb (8.1ms)
+Rendered users/_login.html.erb (0.8ms)
+Rendered posts/index.html.erb within layouts/posts (73.4ms)
+Completed 200 OK in 84ms (Views: 76.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 21:57:21 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.8ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (65.3ms)
+Rendered posts/_post.html.erb (6.1ms)
+Rendered posts/index.html.erb within layouts/posts (74.1ms)
+Completed   in 86ms
+
+ActionView::Template::Error (undefined method `user_id' for #<ActionDispatch::Session::AbstractStore::SessionHash:0x0000010387a740>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= session.user_id %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2189617600__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2189617600__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2158047440__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.4ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 21:58:25 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (53.5ms)
+Rendered posts/_post.html.erb (6.2ms)
+Rendered posts/index.html.erb within layouts/posts (62.1ms)
+Completed   in 73ms
+
+ActionView::Template::Error (undefined method `login' for #<ActionDispatch::Session::AbstractStore::SessionHash:0x0000010160e6e8>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= session.login %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2189559340__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2189559340__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2155502200__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.8ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 21:58:38 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (54.5ms)
+ERROR: compiling _app_views_posts__post_html_erb___1196359535291019152_2189470020__115026287658996452 RAISED /Users/timmarkowski/rubys/work/twitter/app/views/posts/_post.html.erb:3: syntax error, unexpected ')'
+...put_buffer.append= ( session. );@output_buffer.safe_concat('...
+...                               ^
+/Users/timmarkowski/rubys/work/twitter/app/views/posts/_post.html.erb:5: syntax error, unexpected keyword_end, expecting ')'
+'); end 
+       ^
+/Users/timmarkowski/rubys/work/twitter/app/views/posts/_post.html.erb:7: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/timmarkowski/rubys/work/twitter/app/views/posts/_post.html.erb:9: syntax error, unexpected keyword_end, expecting ')'
+Function body:           def _app_views_posts__post_html_erb___1196359535291019152_2189470020__115026287658996452(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "posts/_post";_old_output_buffer = @output_buffer;post_counter = local_assigns[:post_counter];post = local_assigns[:post];;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.append=  div_for post do @output_buffer.safe_concat('
+');@output_buffer.safe_concat('	<p><b>Posted ');@output_buffer.append= ( time_ago_in_words(post.created_at) );@output_buffer.safe_concat(' ago </b></p>
+	<p>Posted by: ');@output_buffer.append= ( session. );@output_buffer.safe_concat('</p>
+	<p>');@output_buffer.append= ( post.message );@output_buffer.safe_concat('</p>
+'); end 
+@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `module_eval'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `compile'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_view/template.rb:134:in `block in render'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.3/lib/active_support/notifications.rb:54:in `instrument'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_view/template.rb:127:in `render'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:300:in `block in collection_with_template'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:297:in `each'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:297:in `collection_with_template'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:280:in `render_collection'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:255:in `block in render'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:253:in `render'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:378:in `_render_partial'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:22:in `render'
+/Users/timmarkowski/rubys/work/twitter/app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2155477880__860556670171311461'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_view/template.rb:135:in `block in render'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.3/lib/active_support/notifications.rb:54:in `instrument'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_view/template.rb:127:in `render'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:56:in `_render_template'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:26:in `render'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:114:in `_render_template'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:92:in `render'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:17:in `render'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/timmarkowski/.rvm/rubies/ruby-1.9.2-p136/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activerecord-3.0.3/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_controller/metal/mime_responds.rb:261:in `block in retrieve_response_from_mimes'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_controller/metal/mime_responds.rb:192:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_controller/metal/mime_responds.rb:192:in `respond_to'
+/Users/timmarkowski/rubys/work/twitter/app/controllers/posts_controller.rb:4:in `index'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:151:in `process_action'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:435:in `_run__1639827620274813837__process_action__373945080514345059__callbacks'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:120:in `process'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:40:in `process'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_controller/metal.rb:138:in `dispatch'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_controller/metal.rb:178:in `block in action'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `block in call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:82:in `optimized_each'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/cookies.rb:295:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:32:in `block in call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:12:in `cache'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:31:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.3/lib/rails/rack/logger.rb:13:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.3/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/rack-1.2.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/static.rb:30:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.3/lib/rails/application.rb:168:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.3/lib/rails/application.rb:77:in `method_missing'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.3/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/Users/timmarkowski/.rvm/rubies/ruby-1.9.2-p136/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/timmarkowski/.rvm/rubies/ruby-1.9.2-p136/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/timmarkowski/.rvm/rubies/ruby-1.9.2-p136/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered posts/_post.html.erb (0.9ms)
+Rendered posts/index.html.erb within layouts/posts (57.7ms)
+Completed   in 69ms
+
+ActionView::Template::Error (/Users/timmarkowski/rubys/work/twitter/app/views/posts/_post.html.erb:3: syntax error, unexpected ')'
+...put_buffer.append= ( session. );@output_buffer.safe_concat('...
+...                               ^
+/Users/timmarkowski/rubys/work/twitter/app/views/posts/_post.html.erb:5: syntax error, unexpected keyword_end, expecting ')'
+'); end 
+       ^
+/Users/timmarkowski/rubys/work/twitter/app/views/posts/_post.html.erb:7: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/timmarkowski/rubys/work/twitter/app/views/posts/_post.html.erb:9: syntax error, unexpected keyword_end, expecting ')'):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= session. %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2155477880__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.3ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 22:05:49 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (54.3ms)
+Rendered posts/_post.html.erb (6.0ms)
+Rendered posts/index.html.erb within layouts/posts (62.7ms)
+Completed   in 74ms
+
+ActionView::Template::Error (undefined method `user' for #<ActionDispatch::Session::AbstractStore::SessionHash:0x0000010160aae8>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= session.user.id %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2189562620__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2189562620__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2155505540__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.4ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 22:07:13 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (51.6ms)
+Rendered posts/_post.html.erb (5.6ms)
+Rendered posts/index.html.erb within layouts/posts (59.7ms)
+Completed   in 70ms
+
+ActionView::Template::Error (undefined method `user_id' for #<ActionDispatch::Session::AbstractStore::SessionHash:0x000001015b21e0>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= session.user_id %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2189460660__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2189460660__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2155204560__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.5ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 22:07:26 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (54.3ms)
+Rendered posts/_post.html.erb (8.3ms)
+Rendered users/_login.html.erb (0.8ms)
+Rendered posts/index.html.erb within layouts/posts (76.0ms)
+Completed 200 OK in 86ms (Views: 78.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 22:07:49 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (21.6ms)
+Rendered posts/_post.html.erb (6.0ms)
+Rendered posts/index.html.erb within layouts/posts (30.0ms)
+Completed   in 41ms
+
+ActionView::Template::Error (undefined method `user_id' for #<ActionDispatch::Session::AbstractStore::SessionHash:0x000001014bb200>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= session.user_id %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2159864160__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2159864160__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2189494800__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.4ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 22:08:06 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (20.0ms)
+Rendered posts/_post.html.erb (8.9ms)
+Rendered users/_login.html.erb (0.9ms)
+Rendered posts/index.html.erb within layouts/posts (43.7ms)
+Completed 200 OK in 54ms (Views: 46.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 22:08:13 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (21.6ms)
+Rendered posts/_post.html.erb (60.4ms)
+Rendered posts/index.html.erb within layouts/posts (84.8ms)
+Completed   in 97ms
+
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x00000101648f00>:0x00000101642060>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= user %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2157403040__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2157403040__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2159148680__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 22:08:18 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (22.1ms)
+Rendered posts/_post.html.erb (60.1ms)
+Rendered posts/index.html.erb within layouts/posts (84.7ms)
+Completed   in 96ms
+
+ActionView::Template::Error (undefined local variable or method `user_id' for #<#<Class:0x00000100e70a30>:0x00000100e69c30>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= user_id %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2189526220__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2189526220__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2155035400__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.1ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 22:08:22 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (54.2ms)
+Rendered posts/_post.html.erb (27.5ms)
+Rendered posts/index.html.erb within layouts/posts (84.3ms)
+Completed   in 95ms
+
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x00000100dc3678>:0x00000100dbca58>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= user.id %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2189518940__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2189518940__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2154677720__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.1ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 22:09:12 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (20.0ms)
+Rendered posts/_post.html.erb (28.3ms)
+Rendered posts/index.html.erb within layouts/posts (50.8ms)
+Completed   in 93ms
+
+ActionView::Template::Error (undefined local variable or method `username' for #<#<Class:0x00000105070750>:0x0000010506e900>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= username %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2177323260__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2177323260__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2189646220__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 22:09:27 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (20.4ms)
+Rendered posts/_post.html.erb (6.4ms)
+Rendered posts/index.html.erb within layouts/posts (29.2ms)
+Completed   in 40ms
+
+ActionView::Template::Error (undefined method `username' for #<Post:0x000001038f8f78>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= post.username %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2158592340__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2158592340__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2177333040__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.6ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 22:09:33 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (20.2ms)
+Rendered posts/_post.html.erb (5.8ms)
+Rendered posts/index.html.erb within layouts/posts (28.3ms)
+Completed   in 39ms
+
+ActionView::Template::Error (undefined method `user' for #<Post:0x000001038e6580>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= post.user %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2158437440__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2158437440__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2177140380__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.5ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 22:09:37 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (21.7ms)
+Rendered posts/_post.html.erb (6.2ms)
+Rendered posts/index.html.erb within layouts/posts (30.3ms)
+Completed   in 41ms
+
+ActionView::Template::Error (undefined method `user_id' for #<Post:0x000001017e40f8>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= post.user_id %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2158301340__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2158301340__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2159997700__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (40.3ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (45.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 22:10:35 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (20.0ms)
+Rendered posts/_post.html.erb (58.7ms)
+Rendered posts/index.html.erb within layouts/posts (81.2ms)
+Completed   in 92ms
+
+ActionView::Template::Error (undefined local variable or method `show' for #<#<Class:0x000001017a8e18>:0x000001017a7018>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= show %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2158126560__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2158126560__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2159881920__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.9ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 22:10:45 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (21.4ms)
+Rendered posts/_post.html.erb (41.7ms)
+Rendered users/_login.html.erb (0.8ms)
+Rendered posts/index.html.erb within layouts/posts (77.4ms)
+Completed 200 OK in 89ms (Views: 80.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 22:19:03 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (51.0ms)
+Rendered posts/_post.html.erb (7.7ms)
+Rendered users/_login.html.erb (0.7ms)
+Rendered posts/index.html.erb within layouts/posts (72.0ms)
+Completed 200 OK in 83ms (Views: 74.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 22:19:09 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (21.1ms)
+Rendered posts/_post.html.erb (6.0ms)
+Rendered posts/index.html.erb within layouts/posts (29.7ms)
+Completed   in 71ms
+
+ActionView::Template::Error (undefined method `name' for #<Post:0x00000105062010>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= post.name %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2177133620__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2177133620__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2189608040__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.4ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 22:21:09 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (20.7ms)
+Rendered posts/_post.html.erb (6.5ms)
+Rendered posts/index.html.erb within layouts/posts (29.7ms)
+Completed   in 41ms
+
+ActionView::Template::Error (undefined method `name' for #<Post:0x000001050419c8>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= post.name %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2159986380__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2159986380__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2189549400__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.6ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 22:22:39 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (19.8ms)
+Rendered posts/_post.html.erb (5.9ms)
+Rendered posts/index.html.erb within layouts/posts (28.0ms)
+Completed   in 39ms
+
+ActionView::Template::Error (undefined method `name' for #<Post:0x00000105016ac0>):
+    1: <%= div_for post do %>
+    2: 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
+    3: 	<p>Posted by: <%= post.name %></p>
+    4: 	<p><%= post.message %></p>
+    5: <% end %>
+  app/views/posts/_post.html.erb:3:in `block in _app_views_posts__post_html_erb___1196359535291019152_2159849660__115026287658996452'
+  app/views/posts/_post.html.erb:1:in `_app_views_posts__post_html_erb___1196359535291019152_2159849660__115026287658996452'
+  app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__744209298752555061_2189459620__860556670171311461'
+  app/controllers/posts_controller.rb:4:in `index'
+
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.5ms)
+Rendered /Users/timmarkowski/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 22:23:08 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (21.7ms)
+Rendered posts/_post.html.erb (7.8ms)
+Rendered users/_login.html.erb (0.7ms)
+Rendered posts/index.html.erb within layouts/posts (43.0ms)
+Completed 200 OK in 53ms (Views: 45.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 22:23:47 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (21.6ms)
+Rendered posts/_post.html.erb (8.0ms)
+Rendered users/_login.html.erb (0.9ms)
+Rendered posts/index.html.erb within layouts/posts (75.2ms)
+Completed 200 OK in 87ms (Views: 77.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 22:23:52 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (54.4ms)
+Rendered posts/_post.html.erb (16.6ms)
+Rendered users/_login.html.erb (0.7ms)
+Rendered posts/index.html.erb within layouts/posts (77.2ms)
+Completed 200 OK in 88ms (Views: 79.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 22:24:07 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (52.2ms)
+Rendered posts/_post.html.erb (15.7ms)
+Rendered users/_login.html.erb (0.7ms)
+Rendered posts/index.html.erb within layouts/posts (73.9ms)
+Completed 200 OK in 85ms (Views: 76.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-23 22:24:47 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered posts/_message_form.html.erb (20.8ms)
+Rendered posts/_post.html.erb (17.1ms)
+Rendered users/_login.html.erb (0.7ms)
+Rendered posts/index.html.erb within layouts/posts (44.1ms)
+Completed 200 OK in 55ms (Views: 46.8ms | ActiveRecord: 0.9ms)
