@@ -1,5 +1,5 @@
 <%= div_for post do %>
 	<p><b>Posted <%= time_ago_in_words(post.created_at) %> ago </b></p>
-	<p>Posted by: <%= current_user.username %></p>
+	
 	<p><%= post.message %></p>
 <% end %>
